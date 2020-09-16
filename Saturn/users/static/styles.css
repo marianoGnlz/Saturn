@@ -1,6 +1,6 @@
 .section-flex {
     display: flex;
-    justify-content: right;
+    justify-content: flex-end;
 }
 .btn {
     min-width: 7rem;
