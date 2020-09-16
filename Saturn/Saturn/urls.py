@@ -19,15 +19,8 @@ from users import views
 
 urlpatterns = [
     path('', views.welcome),
-<<<<<<< HEAD
     path('register/', views.register, name='register'),
     path('login/', views.login, name='login'),
     path('logout/', views.logout, name='logout'),
-=======
-    path('register/', views.register),
-    path('login/', views.login),
-    path('logout/', views.logout),
-
->>>>>>> 5c01105a7fa36cc3b49f6863181752d8e153f927
     path('admin/', admin.site.urls),
 ]
