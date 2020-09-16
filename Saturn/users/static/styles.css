@@ -10,7 +10,6 @@ body {
     background-position: center;
 }
 
-
 .section-flex {
     display: flex;
     justify-content: flex-end;
@@ -28,8 +27,6 @@ body {
 
 }
 
-
-
 .form-check-label {
 	font-weight: 400;
 }
@@ -39,6 +36,11 @@ body {
 	font-weight: 700;
 } 
 
+.form-check-input {
+	margin-top: 6px;
+	margin-left: 15px;
+    justify-content: center;
+}
 
 
 .card-link {
