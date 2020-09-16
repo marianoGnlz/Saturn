@@ -22,10 +22,6 @@ body {
 	font-weight: 700;
 }
 
-.form {
-	padding: 0px 25px;
-}
-
 .form-group {
 	font-weight: 700;
 	font-size: 1.2rem;
@@ -43,11 +39,6 @@ body {
 	font-weight: 700;
 } 
 
-.form-check-input {
-	margin-top: 6px;
-	margin-left: 15px;
-    justify-content: center;
-}
 
 
 .card-link {
