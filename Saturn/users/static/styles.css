@@ -18,7 +18,6 @@ body {
 
 .section-flex {
     display: flex;
-<<<<<<< HEAD
     justify-content: flex-end;
 }
 
@@ -71,9 +70,7 @@ body {
 .form-check-input {
 	margin-top: 6px;
 	margin-left: 15px;
-=======
     justify-content: center;
->>>>>>> 5c01105a7fa36cc3b49f6863181752d8e153f927
 }
 
 .card-link {
@@ -82,13 +79,11 @@ body {
 	font-size: 1.3rem;
 	margin-left: 35px;
 }
-<<<<<<< HEAD
 
-=======
+
 .form-group-register {
     margin-bottom: .3rem ;
 }
 .sexo {
     display: block;
 }
->>>>>>> 5c01105a7fa36cc3b49f6863181752d8e153f927
