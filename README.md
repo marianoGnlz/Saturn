@@ -1,4 +1,4 @@
-* [ ] Login
+* [x] Login
 * [ ] home (bienvenido)
 * [ ] listar
 * [ ] registrar nuevo usuario
