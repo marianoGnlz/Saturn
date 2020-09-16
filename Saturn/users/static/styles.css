@@ -1,0 +1,7 @@
+.section-flex {
+    display: flex;
+    justify-content: right;
+}
+.btn {
+    min-width: 7rem;
+}
