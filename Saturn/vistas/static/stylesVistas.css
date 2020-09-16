@@ -11,21 +11,45 @@ body {
 
 }
 
+.img-fluid{
+	width: 4rem;
+}
+
+.navbar {
+	background-color: transparent !important;
+}
+
+.nav-link {
+	font-size: 1.5rem;
+	margin-top: 0.5rem;
+}
+
+.hello {
+	font-size: 1.5rem;
+	margin-top: 0.5rem;
+	margin-right: 1rem;
+}
+
+.logout {
+	font-size: 1.5rem;
+	margin-top: 0.5rem;
+}
+
 .footer {
 	position: absolute;
 	bottom: 0;
 	width: 100%;
-	height: 60px;
-	line-height: 60px;
-	background-color: #8D8C8C;
+	height: 4rem;
+	line-height: 1.8rem;
+	background-color: transparent !important;
 }
 
 .container-footer {
-    width: auto;
-    max-width: 680px;
+    width: 50%;
+    max-width: 20rem;
     padding: 0 15px;
 }
 
 .text-muted {
-	color: #000000!important;
+	color: #000000 !important;
 }
