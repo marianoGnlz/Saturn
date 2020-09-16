@@ -1,7 +1,13 @@
 .section-flex {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
 }
 .btn {
     min-width: 7rem;
+}
+.form-group-register {
+    margin-bottom: .3rem ;
+}
+.sexo {
+    display: block;
 }
