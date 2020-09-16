@@ -31,8 +31,8 @@ body {
 	font-size: 1.2rem;
 
 }
-rgin-left: 35px;
-} */
+
+
 
 .form-check-label {
 	font-weight: 400;
@@ -41,8 +41,13 @@ rgin-left: 35px;
 .btn {
 	font-size: 1.1rem;
 	font-weight: 700;
-	/* padding-top: 0.750rem; */
 } 
+
+.form-check-input {
+	margin-top: 6px;
+	margin-left: 15px;
+    justify-content: center;
+}
 
 
 .card-link {
@@ -50,3 +55,9 @@ rgin-left: 35px;
 	font-size: 1.3rem;
 }
 
+.form-group-register {
+    margin-bottom: .3rem ;
+}
+.sexo {
+    display: block;
+}
