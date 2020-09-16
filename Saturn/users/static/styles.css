@@ -10,12 +10,6 @@ body {
     background-position: center;
 }
 
-.card {
-	width: 400px;
-	height: 500px;
-	margin-right: 10%;
-}
-
 .section-flex {
     display: flex;
     justify-content: flex-end;
@@ -25,11 +19,6 @@ body {
 	color: #4670FA;
 	font-size: 3rem;
 	font-weight: 700;
-	padding-top: 30px;
-}
-
-.form {
-	padding: 0px 25px;
 }
 
 .form-group {
@@ -38,34 +27,14 @@ body {
 
 }
 
-.form-control {
-	margin-left: 35px;
-	width: 80%;
-}
-
-.usuario {
-	margin-bottom: -20px;
-	margin-left: 35px;
-}
-
-.password {
-	margin-bottom: -20px;
-	margin-left: 35px;
-}
-
 .form-check-label {
-	margin-top: 4px;
 	font-weight: 400;
-	margin-left: 35px;
 }
 
-.btn-primary {
-	padding-top: 12px;
+.btn {
 	font-size: 1.1rem;
 	font-weight: 700;
-	margin-bottom: 10px;
-	margin-left: 35px;
-}
+} 
 
 .form-check-input {
 	margin-top: 6px;
@@ -73,13 +42,11 @@ body {
     justify-content: center;
 }
 
+
 .card-link {
-	padding-top: 40px;
 	font-weight: 700;
 	font-size: 1.3rem;
-	margin-left: 35px;
 }
-
 
 .form-group-register {
     margin-bottom: .3rem ;
