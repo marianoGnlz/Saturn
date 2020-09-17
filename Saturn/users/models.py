@@ -9,8 +9,8 @@ class Registro(models.Model):
         password = models.CharField(max_length=50)
         nombre = models.CharField(max_length=50)
         apellido = models.CharField(max_length=50)
-        dni = models.IntegerField()
-        telefono = models.IntegerField()
+        dni = models.BigIntegerField()
+        telefono = models.BigIntegerField()
         fechaDeNacimiento = models.DateField(auto_now=False, auto_now_add=False)
         
         SEXO = (

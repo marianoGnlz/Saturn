@@ -17,11 +17,16 @@ def welcome(request):
     return render(request, "welcome.html")
 
 def register(request):
+    print('hola')
     form = RegistroForm()
     if request.method == "POST":
+        print('post')
         form = RegistroForm(data=request.POST)
+        print(form.is_valid())
+        print(form.errors)
         if form.is_valid():
             user = form.save()
+            form.clean()
             if user is not None:
                 do_login(request, user)                
                 return redirect('/')
