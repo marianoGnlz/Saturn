@@ -1,13 +1,16 @@
 from django import forms
+from django.contrib.auth.forms import UserCreationForm
+
 from users.models import Registro
 
-class RegistroForm(forms.ModelForm):
+class RegistroForm(UserCreationForm):
     
     class Meta:
         model = Registro
         fields = [
             "email",
-            "password",
+            "password1",
+            "password2",
             "nombre",
             "apellido",
             "dni",
@@ -17,7 +20,6 @@ class RegistroForm(forms.ModelForm):
         ]
         label = {
             'email': 'Email',
-            'password': 'Contraseña',
             'nombre': 'Nombre',
             'apellido': 'Apellido',
             'dni': 'Ingrese su DNI',
@@ -27,7 +29,6 @@ class RegistroForm(forms.ModelForm):
         }
         widgets = {
             'email': forms.TextInput(attrs={'class': 'form-control', 'type': 'email'}),
-            'password': forms.TextInput(attrs={'class': 'form-control', 'type': 'password'}),
             'nombre': forms.TextInput(attrs={'class': 'form-control'}),
             'apellido': forms.TextInput(attrs={'class': 'form-control'}),
             'dni': forms.NumberInput(attrs={'class': 'form-control'}),

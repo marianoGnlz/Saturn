@@ -17,25 +17,27 @@ def welcome(request):
     return render(request, "welcome.html")
 
 def register(request):
-    print('hola')
     form = RegistroForm()
     if request.method == "POST":
-        print('post')
         form = RegistroForm(data=request.POST)
-        print(form.is_valid())
-        print(form.errors)
         if form.is_valid():
-            user = form.save()
-            form.clean()
-            if user is not None:
-                do_login(request, user)                
-                return redirect('/')
+            account = form.save()
+            do_login(request, account)
+            return redirect('dashboard')
 
     form = RegistroForm()
     # Si llegamos al final renderizamos el formulario
     return render(request, "register.html", {'form': form})
 
 def login(request):
+    form = RegistroForm()
+    if request.method == "POST":
+        form = RegistroForm(data=request.POST)
+        if form.is_valid():
+            account = form.save()
+            do_login(request, account)
+            return redirect('dashboard')
+            
     return render(request, "login.html")
 
 def logout(request):

@@ -31,5 +31,14 @@ function agruparSexo(){
     
 }
 
+function editClassPasswords(){
+    const $password1 = document.querySelector('#id_password1');
+    const $password2 = document.querySelector('#id_password2');
+
+    $password1.classList += ' form-control'
+    $password2.classList += ' form-control'
+}
+
 agruparNombre();
 agruparSexo();
+editClassPasswords();
