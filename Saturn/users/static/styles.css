@@ -36,11 +36,7 @@ body {
 	font-weight: 700;
 } 
 
-.form-check-input {
-	margin-top: 6px;
-	margin-left: 15px;
-    justify-content: center;
-}
+
 
 
 .card-link {
@@ -53,4 +49,8 @@ body {
 }
 .sexo {
     display: block;
+}
+
+li {
+	list-style-type: none;
 }

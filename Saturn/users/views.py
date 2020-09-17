@@ -1,10 +1,34 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render,redirect
+from django.http import HttpResponse
+from django.template import Template,Context
+from django.template import loader
+from django.http import HttpResponseRedirect
+from django.contrib import messages
+from django.contrib.auth.models import User
+from django.contrib.auth.forms import UserCreationForm
+from django.views.generic import CreateView
+from django.contrib.auth import authenticate
+from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth import login as do_login
+from django.contrib.auth import logout as do_logout
+from users.forms import RegistroForm
 
 def welcome(request):
     return render(request, "welcome.html")
 
 def register(request):
-    return render(request, "register.html")
+    form = RegistroForm()
+    if request.method == "POST":
+        form = RegistroForm(data=request.POST)
+        if form.is_valid():
+            user = form.save()
+            if user is not None:
+                do_login(request, user)                
+                return redirect('/')
+
+    form = RegistroForm()
+    # Si llegamos al final renderizamos el formulario
+    return render(request, "register.html", {'form': form})
 
 def login(request):
     return render(request, "login.html")

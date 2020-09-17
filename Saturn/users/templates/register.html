@@ -6,7 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Registro</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.ico' %}"/>
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="{% static 'images/favicon.ico' %}"
+    />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -20,122 +24,13 @@
       <div class="card">
         <div class="card-body">
           <h5 class="card-title text-center">Crea tu cuenta</h5>
-
-          <form>
-            <div class="form-group-register">
-              <label for="exampleInputEmail1">Ingrese su email</label>
-              <input
-                type="email"
-                class="form-control"
-                id="exampleInputEmail1"
-                aria-describedby="emailHelp"
-                required
-              />
+          <form method="POST">
+            {% csrf_token %} {% for field in form %}
+            <div class="form-group-register" name="{{field.label}}">
+              <label for="">{{field.label}}</label>
+              {{field}}
             </div>
-            <div class="form-group-register">
-              <label for="exampleInputEmail1">Contraseña</label>
-              <input
-                type="password"
-                class="form-control"
-                id="exampleInputEmail1"
-                aria-describedby="emailHelp"
-                required
-              />
-            </div>
-            <div class="form-row">
-              <div class="form-group-register col">
-                <label for="exampleInputEmail1">Nombre</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="exampleInputEmail1"
-                  aria-describedby="emailHelp"
-                  required
-                />
-              </div>
-              <div class="form-group-register col">
-                <label for="exampleInputEmail1">Apellido</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="exampleInputEmail1"
-                  aria-describedby="emailHelp"
-                  required
-                />
-              </div>
-            </div>
-            <div class="form-group-register">
-              <label for="exampleInputEmail1">Ingrese su DNI</label>
-              <input
-                type="number"
-                class="form-control"
-                id="exampleInputEmail1"
-                aria-describedby="emailHelp"
-                required
-              />
-            </div>
-            <div class="form-row">
-              <div class="form-group-register col">
-                <label for="exampleInputPassword1">Telefono</label>
-                <input
-                  placeholder="362-4888888"
-                  pattern="[0-9]{3}\-?4[0-9]{6}"
-                  type="tel"
-                  class="form-control"
-                  id="exampleInputPassword1"
-                  required
-                />
-              </div>
-              <div class="form-group-register col">
-                <label for="exampleInputEmail1">Fecha de nacimiento</label>
-                <input
-                  type="date"
-                  class="form-control"
-                  id="exampleInputEmail1"
-                  aria-describedby="emailHelp"
-                  required
-                />
-              </div>
-            </div>
-            <label for="Sexo">Sexo</label>
-            <div class="sexo mb-3">
-              <div class="form-check form-check-inline">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="inlineRadioOptions"
-                  id="inlineRadio1"
-                  value="hombre"
-                  required
-                />
-                <label class="form-check-label" for="inlineRadio1"
-                  >Hombre</label
-                >
-              </div>
-              <div class="form-check form-check-inline">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="inlineRadioOptions"
-                  id="inlineRadio2"
-                  value="mujer"
-                  required
-                />
-                <label class="form-check-label" for="inlineRadio2">Mujer</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="inlineRadioOptions"
-                  id="inlineRadio2"
-                  value="otro"
-                  required
-                />
-                <label class="form-check-label" for="inlineRadio2">Otro</label>
-              </div>
-            </div>
-
+            {% endfor %}
             <button type="submit" class="btn btn-info btn-block">
               Registrarse
             </button>
@@ -146,6 +41,7 @@
         </div>
       </div>
     </section>
+    <script src="../static/js/index.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"

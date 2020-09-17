@@ -15,12 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from users import views
+from users import views as vista
 from vistas import views
 
 urlpatterns = [
     path('', views.welcome),
-    path('register/', views.register, name='register'),
+    path('register/', vista.register, name='register'),
     path('login/', views.login, name='login'),
     path('logout/', views.logout, name='logout'),
     path('dashboard/', views.dashboard, name='dashboard'),
