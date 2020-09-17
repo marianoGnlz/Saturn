@@ -24,10 +24,15 @@ body {
 	margin-top: 0.5rem;
 }
 
+.navbar-nav {
+	font-weight: 700;
+}
+
 .hello {
 	font-size: 1.5rem;
 	margin-top: 0.5rem;
 	margin-right: 1rem;
+	color: #FE2323;
 }
 
 .logout {

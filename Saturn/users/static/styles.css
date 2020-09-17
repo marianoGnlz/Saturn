@@ -6,7 +6,6 @@ body {
 	background-image: url(images/fondo.png);
 	background-attachment: fixed;
     background-size: cover;
-    background-repeat: no-repeat;
     background-position: center;
 }
 
@@ -17,13 +16,13 @@ body {
 
 .card-title {
 	color: #4670FA;
-	font-size: 3rem;
+	font-size: 4rem;
 	font-weight: 700;
 }
 
 .form-group {
 	font-weight: 700;
-	font-size: 1.2rem;
+	font-size: 1.5rem;
 
 }
 
@@ -37,11 +36,15 @@ body {
 } 
 
 
+.form-control {
+	height: 3rem;
+	font-size: 1.3rem;
+}
 
 
 .card-link {
 	font-weight: 700;
-	font-size: 1.3rem;
+	font-size: 1.5rem;
 }
 
 .form-group-register {
