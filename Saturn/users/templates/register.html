@@ -17,12 +17,13 @@
       integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
       crossorigin="anonymous"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'styles.css' %}" />
   </head>
   <body>
     <section class="section-flex container-sm mt-4">
       <div class="card">
-        <div class="card-body">
+        <div class="card-body m-4">
           <h5 class="card-title text-center">Crea tu cuenta</h5>
           <form method="POST">
             {% csrf_token %} {% for field in form %}
@@ -31,13 +32,13 @@
               {{field}}
             </div>
             {% endfor %}
-            <button type="submit" class="btn btn-info btn-block">
+            <button type="submit" class="btn btn-info btn-block pt-3">
               Registrarse
             </button>
           </form>
 
           <br />
-          <a href="{% url 'login' %}" class="card-link">Regresar</a>
+          <a href="{% url 'login' %}" class="card-link">INICIAR SESIÓN</a>
         </div>
       </div>
     </section>
