@@ -9,6 +9,19 @@ body {
     background-position: center;
 }
 
+.register-form {
+	font-weight: 700;
+	margin-top: 1rem;
+}
+
+.form-group-register {
+	margin-top: 1rem;
+}
+
+.form-group-register input{
+	padding-top: 1rem;
+}
+
 .section-flex {
     display: flex;
     justify-content: flex-end;
