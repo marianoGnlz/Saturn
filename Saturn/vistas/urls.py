@@ -4,6 +4,6 @@ from vistas import views
 
 urlpatterns=[
     path('dashboard/', views.dashboard, name='dashboard'),
-    path('turnos/', views.turnos, name='turnos'),
     path('panelusuario/', views.panelusuario, name='panelusuario'),
+    path('turnos/', views.turnos, name='turnos'),
 ]
