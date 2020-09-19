@@ -8,12 +8,27 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="mr-auto navbar-nav">
       <li class="nav-item active d-none d-lg-block">
-            <a class="nav-link pt-3 pb-0" href="{% url 'dashboard' %}">Saturn<span class="sr-only">(current)</span></a>
+        <a class="nav-link pt-3 pb-0" href="{% url 'dashboard' %}">Saturn<span class="sr-only">(current)</span></a>
       </li>
     </ul>
-    <div class="pt-3">
+  <div>
+    <ul class="mr-auto navbar-nav">
+      <li class="nav-item active d-none d-lg-block">
+        <span class="nav-link pt-3 pb-0">Hola {{request.user}}</span>
+      </li>
+    </ul>
+<!--     <li>
       <span class="hello d-none d-lg-inline">Hola, {{request.user}}</span>
-      <span class="logout"><a href="{% url 'logout' %}">Cerrar Sesión</a></span>
+    </li> -->
+  </div>
+    <div class="nav-item dropdown pt-3">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="{% url 'panelusuario' %}">Panel de Usuario</a>
+        <a class="dropdown-item" href="{% url 'logout' %}">Cerrar Sesión</a>
+      </div>
+      
     </div>
   </div>
 </nav>  

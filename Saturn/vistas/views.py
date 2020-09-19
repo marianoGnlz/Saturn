@@ -20,3 +20,6 @@ def dashboard(request):
 
 def turnos(request):
 	return render(request, "turnos.html")
+
+def panelusuario(request):
+	return render(request, "panelusuario.html")

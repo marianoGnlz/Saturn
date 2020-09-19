@@ -39,7 +39,6 @@ html, body {
 
 .hello {
 	font-size: 1.5rem;
-	margin-right: 1rem;
 	color: #fff;
 }
 
@@ -70,6 +69,84 @@ html, body {
 .navbar-toggler:focus {
 	outline: 1px solid;
 	border-radius: .25rem;
+}
+
+.btn-secondary {
+	background-color: transparent;
+	border-color: transparent;
+	font-size: 1.4rem;
+	padding-top: .8rem;
+}
+
+.btn-secondary:focus {
+	background-color: transparent;
+	border-color: transparent;
+	box-shadow: none;
+}
+
+.btn-secondary:active {
+	background-color: transparent;
+	box-shadow: none;
+}
+
+.btn-secondary:hover {
+	background-color: transparent;
+	border-color: transparent;
+}
+
+.btn-secondary:not(:disabled):not(.disabled).active, .btn-secondary:not(:disabled):not(.disabled):active, .show>.btn-secondary.dropdown-toggle {
+	background-color: transparent;
+	border-color: transparent;
+	box-shadow: none;
+}
+
+.btn-secondary:not(:disabled):not(.disabled).active:focus, .btn-secondary:not(:disabled):not(.disabled):active:focus, .show>.btn-secondary.dropdown-toggle:focus {
+	box-shadow: none;
+}
+
+.dropdown-menu {
+	right: 0;
+	left: auto;
+	background-color: #15202b;
+	border: 0;
+	border-radius: 0;
+	padding-top: 2rem;
+	width: 15%;
+	top: auto;
+}
+
+.dropdown-item {
+	color: #fff;
+	margin-bottom: 1rem;
+	font-weight: 700;
+	font-size: 1.3rem;
+	text-align: center;
+}
+
+.dropdown-item:focus,
+.dropdown-item:hover {
+	background-color: transparent;
+	color: #43F584;
+}
+
+.dropdown, .dropleft, .dropright, .dropup {
+	position: inherit;
+}
+
+.dropdown .dropdown-menu {
+    -webkit-transition: all 0.7s;
+    -moz-transition: all 0.7s;
+    -ms-transition: all 0.7s;
+    -o-transition: all 0.7s;
+    transition: all 0.7s;
+    display: block;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.dropdown.show .dropdown-menu {
+    max-height: 300px;
+    opacity: 1;
 }
 
 .fa-twitter, .fa-facebook-f, .fa-github {
