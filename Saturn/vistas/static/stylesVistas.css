@@ -23,7 +23,7 @@ html, body {
 	background-color: #15202b;
 }
 
-.img-fluid{
+.logo-sa{
 	width: 4rem;
 }
 
@@ -102,6 +102,11 @@ html, body {
 
 .btn-secondary:not(:disabled):not(.disabled).active:focus, .btn-secondary:not(:disabled):not(.disabled):active:focus, .show>.btn-secondary.dropdown-toggle:focus {
 	box-shadow: none;
+}
+
+.btn-info.focus, .btn-info:focus {
+	background-color: transparent;
+	border-color: transparent;
 }
 
 .dropdown-menu {

@@ -15,6 +15,22 @@ body {
 	color: #fff;
 }
 
+.btn-info.focus, .btn-info:focus {
+	background-color: transparent;
+	border-color: #fff;
+	box-shadow: none;
+}
+
+.btn-info:not(:disabled):not(.disabled).active, .btn-info:not(:disabled):not(.disabled):active, .show>.btn-info.dropdown-toggle {
+	background-color: transparent;
+	border-color: #fff;
+}
+
+.btn-info:not(:disabled):not(.disabled).active:focus, .btn-info:not(:disabled):not(.disabled):active:focus, .show>.btn-info.dropdown-toggle:focus {
+	box-shadow: none;
+}
+
+
 .form-group-register {
 	margin-top: 1rem;
 }
@@ -137,7 +153,16 @@ body {
 }
 
 .btn-primary.focus, .btn-primary:focus {
-	border-color: none;
+	border-color: #fff;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+	background-color: transparent;
+	border-color: #fff;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active:focus, .btn-primary:not(:disabled):not(.disabled):active:focus, .show>.btn-primary.dropdown-toggle:focus {
+	box-shadow: none;
 }
 
 .card {
@@ -149,6 +174,10 @@ body {
 	font-weight: 700;
 	font-size: 1.5rem;
 	color: #fff;
+}
+
+.card-body {
+	padding: 0;
 }
 
 .form-group-register {
