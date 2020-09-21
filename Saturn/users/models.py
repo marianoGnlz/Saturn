@@ -1,10 +1,13 @@
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser
 
+from .managers import CustomUserManager
+
+
 # Create your models here.
 class Registro(AbstractBaseUser):
         idUsuario = models.AutoField(primary_key=True)
-        email = models.CharField(max_length=50)
+        email = models.CharField(max_length=50, unique=True)
         nombre = models.CharField(max_length=50)
         apellido = models.CharField(max_length=50)
         dni = models.BigIntegerField()
@@ -21,3 +24,8 @@ class Registro(AbstractBaseUser):
             ('O', 'Otros'),
         )
         sexo = models.CharField(max_length=1, choices=SEXO)
+        
+        objects = CustomUserManager()
+
+        def __str__(self):
+            return self.email

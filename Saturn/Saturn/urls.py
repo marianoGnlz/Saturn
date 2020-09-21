@@ -19,9 +19,9 @@ from users import views as vista
 from vistas import views
 
 urlpatterns = [
-    path('', views.welcome),
+    # path('', views.welcome),
     path('register/', vista.register, name='register'),
-    path('login/', views.login, name='login'),
+    path('', vista.login, name='login'),
     path('logout/', views.logout, name='logout'),
     path('dashboard/', views.dashboard, name='dashboard'),
     path('turnos/', views.turnos, name='turnos'),

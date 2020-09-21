@@ -22,13 +22,15 @@
         <div class="card-body m-5">
         <h5 class="card-title text-center mt-3">INICIAR SESIÓN</h5>
           <form method="POST">
+            {% csrf_token %}
             <div class="form-group">
               <label for="exampleInputEmail1" class="usuario mb-0">Usuario</label>
               <input
                 type="email"
                 class="form-control pt-3"
-                id="exampleInputEmail1"
+                id="email"
                 aria-describedby="emailHelp" placeholder="Ingrese su DNI o email" 
+                name="email"
               />
             </div>
             <div class="form-group">
@@ -36,8 +38,9 @@
               <input
                 type="password"
                 class="form-control pt-3"
-                id="exampleInputPassword1" placeholder="Ingrese su contraseña"
-              />
+                id="password" placeholder="Ingrese su contraseña"
+                name="password"
+                />
             </div>
             <div class="form-group form-check">
               <input

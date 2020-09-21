@@ -30,13 +30,15 @@ def register(request):
     return render(request, "register.html", {'form': form})
 
 def login(request):
-    form = RegistroForm()
     if request.method == "POST":
-        form = RegistroForm(data=request.POST)
-        if form.is_valid():
-            account = form.save()
-            do_login(request, account)
-            return redirect('dashboard')
+        print(request)
+        username = request.POST['email']
+        password = request.POST['password']
+        print(username)
+        print(password)
+        account = authenticate(username=username, password=password)
+        do_login(request, account)
+        return redirect('dashboard')
             
     return render(request, "login.html")
 
