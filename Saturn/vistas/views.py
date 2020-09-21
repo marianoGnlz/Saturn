@@ -17,3 +17,6 @@ def logout(request):
 
 def dashboard(request):
     return render(request, "dashboard.html")
+
+def turnos(request):
+	return render(request, "turnos.html")
