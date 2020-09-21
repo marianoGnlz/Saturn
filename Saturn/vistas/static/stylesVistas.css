@@ -104,11 +104,6 @@ html, body {
 	box-shadow: none;
 }
 
-.btn-info.focus, .btn-info:focus {
-	background-color: transparent;
-	border-color: transparent;
-}
-
 .dropdown-menu {
 	right: 0;
 	left: auto;

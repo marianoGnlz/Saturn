@@ -22,9 +22,9 @@
   </head>
   <body>
     <section class="section-flex container-sm mt-4">
-      <div class="card">
+      <div class="card regi-card">
         <div class="card-body m-4">
-          <h5 class="card-title text-center">Crea tu cuenta</h5>
+          <h5 class="card-title text-center title-regi">Crea tu cuenta</h5>
           <form method="POST" class="register-form">
             {% csrf_token %} {% for field in form %}
             <div class="form-group-register" name="{{field.label}}">

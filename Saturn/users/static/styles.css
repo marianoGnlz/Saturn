@@ -191,3 +191,82 @@ body {
 li {
 	list-style-type: none;
 }
+
+@media (min-width: 1800px) {
+	.title-login {
+		font-size: 6rem;
+}
+	.title-regi {
+		font-size: 4rem;
+}
+	.regi-card{
+		margin-top: 0;
+}
+	.form-control {
+    	height: 4rem;
+    	font-size: 1.8rem;
+    	padding: 0;
+}
+	.fa-lock {
+		padding-top: 3.4rem;
+}
+	.fa-user-alt {
+		padding-top: 3.4rem;
+	}
+	.form-check-label {
+    	padding-left: 11rem;
+    	font-size: 1.9rem;
+}
+	.form-check-input {
+	    margin-top: .2em;
+	    margin-left: 8.6rem;
+	    width: 1.2rem;
+	    height: 1.2rem;
+}
+	.btn-login {
+	    font-size: 1.6rem;
+	    font-weight: 700;
+	    background-color: transparent;
+	    border-color: #fff;
+	    width: 15rem;
+	    height: 4rem;
+	    padding: 0;
+}
+	.login-card {
+		margin-top: 10rem;
+	}
+
+}
+
+@media (max-width: 767px) {
+	.card-title {
+		font-size: 2.7rem;
+}
+	.form-control {
+	    height: 3rem;
+	    width: 19rem;
+	    font-size: 1.3rem;
+}
+	.form-group {
+		margin-left: 3.5rem;
+	}
+	.form-check-label {
+		padding-left: 2rem;
+}
+	.form-check-input {
+	    margin-top: .2rem;
+	    margin-left: .6rem;
+}
+	.btn-login {
+		width: 12rem;
+	    height: 3rem;
+	    font-size: 1rem;
+	    margin-left: 7rem;
+}
+
+}
+
+@media (max-width: 575px) {
+
+}
+
