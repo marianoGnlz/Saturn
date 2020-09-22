@@ -176,9 +176,9 @@ body {
 	color: #fff;
 }
 
-.card-body {
+/*.card-body {
 	padding: 0;
-}
+}*/
 
 .form-group-register {
     margin-bottom: .3rem ;
@@ -192,7 +192,112 @@ li {
 	list-style-type: none;
 }
 
-@media (min-width: 1800px) {
+
+@media (max-width: 767px) {
+	.card-title {
+		font-size: 2.7rem;
+}
+	.form-control {
+	    font-size: 1.3rem;
+}
+/*	.form-group {
+		margin-left: 2.5rem;
+	}*/
+	.form-check-label {
+		padding-left: 4rem;
+}
+	.form-check-input {
+	    margin-top: .2rem;
+	    margin-left: 2.6rem;
+}
+	.btn-login {
+		width: 12rem;
+	    height: 3rem;
+	    font-size: 1rem;
+	    margin-left: 6rem;
+}
+	.card-body {
+		padding-right: 1rem;
+	}
+}
+
+@media (min-width: 768px) {
+	.card-body {
+		padding-right: 4rem;
+	}
+}
+
+@media (min-width: 769px) {
+	.card-body {
+		padding-right: 4rem;
+	}
+}
+
+@media (min-width: 992px) {
+	.card-body {
+		padding-right: 11rem;
+	}
+}
+
+@media (min-width: 1400px) {
+	.card-body {
+		margin-top: 0rem;
+		padding: 0;
+	}
+	.form-control {
+    	padding: 0;
+}
+	.login-card {
+		margin-top: 3rem;
+		padding-right: 8rem;
+	}
+}
+
+@media (max-width: 530px) {
+	.card-body {
+	    padding-right: 4rem;
+	    height: 50rem;
+	    width: 25rem;
+	    padding-left: 4rem;
+	    margin: 0 !important;
+}
+	.card-title {
+		font-size: 1.8rem;
+	}
+	.form-group {
+    	margin-left: 1rem;
+}
+	.btn-login {
+    	width: 12rem;
+    	height: 3rem;
+    	font-size: 1rem;
+    	margin-left: 2rem;
+}
+	.form-control {
+   	 	height: 3rem;
+    	width: 14rem;
+    	font-size: 1rem;
+}
+	.fa-lock, .fa-user-alt {
+		display: none !important;
+}
+	.form-check-label {
+    	padding-left: 1.6rem;
+    	font-size: 1rem;
+}
+	.form-check-input {
+    	margin-top: .4rem;
+    	margin-left: .6rem;
+    	width: .8rem;
+    	height: .8rem;
+}
+	
+}
+
+@media (min-width: 1920px) {
+	.card-body {
+		padding-right: 1rem;
+}
 	.title-login {
 		font-size: 6rem;
 }
@@ -234,39 +339,6 @@ li {
 }
 	.login-card {
 		margin-top: 10rem;
+		padding-right: 0rem;
 	}
-
 }
-
-@media (max-width: 767px) {
-	.card-title {
-		font-size: 2.7rem;
-}
-	.form-control {
-	    height: 3rem;
-	    width: 19rem;
-	    font-size: 1.3rem;
-}
-	.form-group {
-		margin-left: 3.5rem;
-	}
-	.form-check-label {
-		padding-left: 2rem;
-}
-	.form-check-input {
-	    margin-top: .2rem;
-	    margin-left: .6rem;
-}
-	.btn-login {
-		width: 12rem;
-	    height: 3rem;
-	    font-size: 1rem;
-	    margin-left: 7rem;
-}
-
-}
-
-@media (max-width: 575px) {
-
-}
-
