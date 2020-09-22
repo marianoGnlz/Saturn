@@ -243,7 +243,10 @@ li {
 	.card-body {
 		margin-top: 0rem;
 		padding: 0;
-	}
+}
+	.regi-card{
+		padding-right: 25rem;
+}
 	.form-control {
     	padding: 0;
 }
@@ -305,7 +308,7 @@ li {
 		font-size: 4rem;
 }
 	.regi-card{
-		margin-top: 0;
+		padding-right: 25rem;
 }
 	.form-control {
     	height: 4rem;
