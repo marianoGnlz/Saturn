@@ -46,4 +46,5 @@ def login(request):
 
 def logout(request):
     # Redireccionamos a la portada
-    return redirect('/')
+    return render(request, 'login.html')
+ 
