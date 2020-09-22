@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'users',
     'vistas',
+    'turnos',
 ]
 
 MIDDLEWARE = [
@@ -83,16 +84,19 @@ WSGI_APPLICATION = 'Saturn.wsgi.application'
 #     }
 # }
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'saturn2',
-        'USER': 'saturnadmin',
-        'PASSWORD': '12345',
-        'HOST': 'localhost',
-        'PORT': '3306',
-    }
-}
+# DATABASES = {
+#    'default': {
+#      'ENGINE': 'django.db.backends.mysql',
+#       'NAME': 'djangodatabase',
+#       'USER': 'saturn',
+#       'PASSWORD':'saturn',
+#       'HOST':'127.0.0.1',
+#       'PORT':'3306',
+#       'OPTIONS': {
+#            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+#        },
+#    }
+#}
 
 
 # Password validation
@@ -117,6 +121,10 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
+DATETIME_INPUT_FORMATS = [
+    '%d/%m/%Y %H:%M',     # '25/10/2006 14:30'
+]
+
 LANGUAGE_CODE = 'es-ar'
 
 TIME_ZONE = 'America/Argentina/Buenos_Aires'
@@ -138,6 +146,7 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
     os.path.join(os.path.dirname(BASE_DIR) + "\\Saturn\\users", 'static'),
+    os.path.join(os.path.dirname(BASE_DIR) + "\\Saturn\\turnos", 'static'),
 )
 
 SILENCED_SYSTEM_CHECKS = [

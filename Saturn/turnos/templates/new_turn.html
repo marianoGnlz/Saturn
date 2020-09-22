@@ -1,0 +1,16 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+    <div class="card-body-new">
+        <h2 class="card-title text-center">Nuevo Turno</h2>
+
+        <form method="POST">
+            {{ form.as_p }}
+            {% csrf_token %}
+        
+            <button type="submit" class="btn btn-primary">Registrar</button>
+        </form>        
+    </div>
+
+{% endblock %}

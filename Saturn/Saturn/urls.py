@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from users import views as vista
 from vistas import views
+from turnos import views as vistaTurnos
 
 urlpatterns = [
     # path('', views.welcome),
@@ -24,6 +25,10 @@ urlpatterns = [
     path('', vista.login, name='login'),
     path('logout/', views.logout, name='logout'),
     path('dashboard/', views.dashboard, name='dashboard'),
-    path('turnos/', views.turnos, name='turnos'),
+    path('new_turn/', vistaTurnos.new_turn, name='new_turn'),
+    path('turn_ok/', vistaTurnos.turn_ok, name='turn_ok'),
+    path('combo_medico/', vistaTurnos.combo_medico, name='combo_medico'),
+    path('combo_horario/', vistaTurnos.combo_horario, name='combo_horario'),
+
     path('admin/', admin.site.urls),
 ]

@@ -37,6 +37,7 @@ def login(request):
         print(username)
         print(password)
         account = authenticate(username=username, password=password)
+        print(account)
         if account is not None:
             do_login(request, account)
             return redirect('dashboard')
