@@ -17,11 +17,13 @@ html, body {
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
+    height: 90%;
 }
 
 .section-box {
-	margin: 20rem 0;
+	padding-top: 20rem;
 	padding-left: 7rem;
+
 }
 
 .navbar {
