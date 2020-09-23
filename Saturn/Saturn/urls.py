@@ -23,7 +23,7 @@ urlpatterns = [
     # path('', views.welcome),
     path('register/', vista.register, name='register'),
     path('', vista.login, name='login'),
-    path('logout/', views.logout, name='logout'),
+    path('logout/', vista.logout, name='logout'),
     path('dashboard/', views.dashboard, name='dashboard'),
     path('new_turn/', vistaTurnos.new_turn, name='new_turn'),
     path('turn_ok/', vistaTurnos.turn_ok, name='turn_ok'),

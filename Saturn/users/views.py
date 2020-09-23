@@ -24,20 +24,16 @@ def register(request):
             account = form.save()
             do_login(request, account)
             return redirect('dashboard')
-
-    form = RegistroForm()
+        else:
+            print(form.errors)
     # Si llegamos al final renderizamos el formulario
     return render(request, "register.html", {'form': form})
 
 def login(request):
     if request.method == "POST":
-        print(request)
         username = request.POST['email']
         password = request.POST['password']
-        print(username)
-        print(password)
         account = authenticate(username=username, password=password)
-        print(account)
         if account is not None:
             do_login(request, account)
             return redirect('dashboard')
@@ -46,4 +42,5 @@ def login(request):
 
 def logout(request):
     # Redireccionamos a la portada
+    do_logout(request)
     return redirect('/')
