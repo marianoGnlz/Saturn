@@ -45,6 +45,6 @@ def login(request):
     return render(request, "login.html")
 
 def logout(request):
-    # Redireccionamos a la portada
-    return render(request, 'login.html')
+    do_logout(request)
+    return redirect('/')
  

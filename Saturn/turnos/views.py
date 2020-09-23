@@ -2,8 +2,15 @@ from django.shortcuts import render,redirect
 from turnos.forms import TurnoForm
 from turnos.models import Turno, EspecialidadMedico, Medico, ConfiguracionHoraria
 from users.models import Registro
+from vistas import views
+from django.contrib.auth.decorators import login_required
+
 
 # Create your views here.
+@login_required(login_url='login')
+def login(request):
+    return render(request, "login.html")
+    
 def new_turn(request):
 
     form = TurnoForm()

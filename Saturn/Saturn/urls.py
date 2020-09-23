@@ -16,14 +16,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from users import views as vista
-from vistas import views
+from vistas import views 
+from turnos import views 
 from django.conf import settings
 from django.conf.urls.static import static
 
 
 urlpatterns = [
-    path('', views.login, name='login'),
+    path('', views.login, name='login'),    
     path('admin/', admin.site.urls),
     path('vistas/', include('vistas.urls')),
     path('users/', include('users.urls')),
+    path('turnos/', include('turnos.urls')),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -2,36 +2,37 @@
 
 {% block content %}
 
-    
-<div class="turno_list">
-    <h2 class="welcome">
-        Turno Solicitado con EXITO!
-    </h2> 
-    <table class="table";>
-        <tr>
-            <th scope="row">DIA </th>
-            <th scope="row">NOMBRE </th>
-            <th scope="row">ESPECIALIDAD</th>
-            <th scope="row">MEDICO</th>    
-            <th scope="row"></th>       
-        </tr>
-        {% for turno in turno %}
-        <tr>
-            <td>{{turno.fecha_turno}}</td>
-            <td>{{turno.nombre}}</td>
-            <td>{{turno.especialidad.descripcion}}</td>
-            <td>{{turno.medico.nombre}}</td>
-            <td>
+<div class="col-4">
+    <div class="turno_list">
+        <h2 class="welcome">
+            Turno Solicitado con EXITO!
+        </h2> 
+        <table class="table";>
+            <tr>
+                <th scope="row">DIA </th>
+                <th scope="row">NOMBRE </th>
+                <th scope="row">ESPECIALIDAD</th>
+                <th scope="row">MEDICO</th>    
+                <th scope="row"></th>       
+            </tr>
+            {% for turno in turno %}
+            <tr>
+                <td>{{turno.fecha_turno}}</td>
+                <td>{{turno.nombre}}</td>
+                <td>{{turno.especialidad.descripcion}}</td>
+                <td>{{turno.medico.nombre}}</td>
+                <td>
 
-                <a class="btn btn-primary list" href="/delete_turn?id_turno={{turno.TurnoId}}">Cancelar</a>
-                   
-            </td>
-        </tr>
-       
-        {% endfor %}
-        
-    </table>
-    <a href="/logout" class="btn btn-primary">Salir</a>
-    <a href="/new_turn" class="btn btn-primary">Solicitar otro turno</a>    
-</div>
+                    <a class="btn btn-primary list" href="/delete_turn?id_turno={{turno.TurnoId}}">Cancelar</a>
+                       
+                </td>
+            </tr>
+           
+            {% endfor %}         
+        </table>
+        <a href="/logout" class="btn btn-primary">Salir</a>
+        <a href="/new_turn" class="btn btn-primary">Solicitar otro turno</a>    
+    </div>
+</div>   
+
 {% endblock %}
