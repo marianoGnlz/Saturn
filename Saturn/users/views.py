@@ -13,8 +13,6 @@ from django.contrib.auth import login as do_login
 from django.contrib.auth import logout as do_logout
 from users.forms import RegistroForm
 
-def welcome(request):
-    return render(request, "welcome.html")
 
 def register(request):
     form = RegistroForm()

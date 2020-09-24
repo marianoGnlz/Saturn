@@ -53,3 +53,6 @@ def turn_ok(request):
         'turno':turno,
         }
     return render(request, "turn_ok.html",contexto) 
+
+def saturn_home(request):
+    return redirect('login')
