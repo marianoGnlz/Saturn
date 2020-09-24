@@ -2,28 +2,86 @@
 	font-family: 'Baloo Tammudu 2', cursive; 
 }
 
-body {
-	
+html, body {
+	height: 100%;
+	margin: 0; 
 }
 
-html, body {
-    height: 100%;
-    margin: 0; 
+.turnos-bg {
+	background-image: url(../../turnos/static/imagesturnos/eldotorregistro.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
 }
+
+.turnos-content {
+	padding-top: 1rem;
+	padding-left: 3rem;
+}
+
+.turnos-content input {
+	padding-top: .9rem;
+	height: 2rem;
+	border: 1px solid #111;
+}
+
+.turnos-content select {
+	padding-top: .2rem;
+	border: 1px solid #111;
+}
+
+.turnos-content input[type="date"]::-webkit-inner-spin-button {
+	margin: 0;
+}
+.turnos-content input[type="date"]::-webkit-calendar-picker-indicator {
+	margin: 0;
+	padding-bottom: .6rem;
+}
+
+.btn-turno {
+	padding-top: .8rem;
+	width: 7rem;
+	font-weight: 700;	
+}
+
+.card-title {
+	font-weight: 800;
+	font-size: 2.5rem;
+	padding-top: 8rem;
+}
+
 
 .pepega-box {
 	background-image: url(imagenes/elwachin.png);
 	background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
-    height: 90%;
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+	height: 100%;
+}
+
+.usuario-bg {
+	background-image: url(../../turnos/static/imagesturnos/form.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+	height: 100%;
+}
+
+.btn-usuarios {
+	padding-top: 1rem;	
+}
+
+.welcome {
+	padding-top: 7rem;
+	font-weight: 700;
 }
 
 .section-box {
 	padding-top: 20rem;
 	padding-left: 7rem;
-
 }
 
 .navbar {
@@ -37,6 +95,7 @@ html, body {
 .nav-link {
 	font-size: 2rem;
 	color: #fff;
+	font-size: 1.7rem;
 }
 
 .nav-link:hover {
@@ -48,10 +107,10 @@ html, body {
 	list-style: none;
 }
 
-.hello {
+/*.hello {
 	font-size: 1.5rem;
 	color: #fff;
-}
+}*/
 
 .logout {
 	font-size: 1.5rem;
@@ -153,9 +212,6 @@ html, body {
 	text-decoration: none;
 }
 
-.btn:not(:disabled):not(.disabled) {
-	margin-bottom: 10px !important;
-}
 
 .link-box {
 	margin-top: .8rem;
@@ -212,7 +268,6 @@ html, body {
 
 	.dropdown .dropdown-menu {
 		transition: all 0.7s;
-		display: block;
 		overflow: hidden;
 		opacity: 0;
 		z-index: -1;

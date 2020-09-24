@@ -1,18 +1,21 @@
 {% extends 'main.html' %}
 
 {% block content %}
+<div class="row turnos-bg no-gutters">
 	<div class="col-4">
 		<div class="card-body-new">
-	        <h2 class="card-title text-center">Nuevo Turno</h2>
+	        <h2 class="card-title text-center mt-3">Nuevo Turno</h2>
 
-	        <form method="POST">
+	        <form method="POST" class="turnos-content">
 	            {{ form.as_p }}
 	            {% csrf_token %}
 	        
-	            <button type="submit" class="btn btn-primary">Registrar</button>
+	            <button type="submit" class="btn btn-primary btn-turno">Solicitar</button>
 	        </form>        
     	</div>
 	</div>
+</div>
+	
     
 
 {% endblock %}
