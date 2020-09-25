@@ -50,5 +50,4 @@ def turn_ok(request):
 def delete_turn(request,TurnoId):
     idturno= Turno.objects.get(TurnoId=TurnoId)
     idturno.delete()
-    print(idturno)
     return render(request,"delete_turn.html")  
