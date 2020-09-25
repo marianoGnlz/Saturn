@@ -37,7 +37,7 @@ class Medico(models.Model):
 
 class Turno(models.Model):
     TurnoId          = models.AutoField(primary_key=True)
-    dias             = models.CharField(max_length=50, null=True)
+    hora_turno       = models.TimeField(null=True)
     fecha_registro   = models.DateField(default=timezone.now)
     usuario          = models.ForeignKey(Registro, on_delete=models.CASCADE, null=True)
     especialidad     = models.ForeignKey(Especialidad, on_delete=models.CASCADE)    

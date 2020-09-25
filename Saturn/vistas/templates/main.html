@@ -7,19 +7,19 @@
 	<title></title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="{% static '/css/PrintArea.css' %}" />
 	<link rel="stylesheet" href="{% static 'stylesVistas.css' %}" />
 	<link rel="stylesheet" href="{% static '/css/my_styles.css' %}" />
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+	
 </head>
 <body>
 	
 	{% include 'navbar.html' %}
 
-	{% block content %}
-
-
-
-	{% endblock %}
+	<div class="container">
+		{% block content %}{% endblock %}
+	</div>
 
 	{% include 'footer.html' %}
 
@@ -35,6 +35,9 @@
  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>    
  <!-- Minified JS library -->
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
- 
+ <script src= "https://momentjs.com/downloads/moment.min.js"></script>
+ <scripT src= "https://momentjs.com/downloads/moment-with-locales.js"></script>
 <script src= "{% static '/js/my_functions.js' %}"></script>
+<script src= "{% static '/js/jquery.PrintArea.js' %}"></script>
+
 </html>
