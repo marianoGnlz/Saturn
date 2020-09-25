@@ -47,10 +47,8 @@ def turn_ok(request):
         }
     return render(request, "turn_ok.html",contexto)
 
-def delete_turn(request):
-    registro = Registro.objects.get(email=request.user)
-    turno = Turno.objects.filter(usuario_id=registro.idUsuario)
-    contexto = {
-        'turno':turno,
-        }
-    return render(request, "delete_turn.html",contexto)
+def delete_turn(request,TurnoId):
+    idturno= Turno.objects.get(TurnoId=TurnoId)
+    idturno.delete()
+    print(idturno)
+    return redirect('/turn_ok')
