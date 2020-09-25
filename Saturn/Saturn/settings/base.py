@@ -88,8 +88,8 @@ DATABASES = {
    'default': {
      'ENGINE': 'django.db.backends.mysql',
       'NAME': 'djangodatabase',
-      'USER': 'saturn',
-      'PASSWORD':'saturn',
+      'USER': 'saturnadmin',
+      'PASSWORD':'12345',
       'HOST':'127.0.0.1',
       'PORT':'3306',
    }
