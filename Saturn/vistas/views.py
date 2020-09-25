@@ -3,20 +3,8 @@ from django.contrib.auth.decorators import login_required
 from users.models import Registro
 from turnos.models import Medico
 
+
 @login_required(login_url='login')
-def welcome(request):
-    return render(request, "welcome.html")
-
-def register(request):
-    return render(request, "register.html")
-
-def login(request):
-    return render(request, "login.html")
-
-def logout(request):
-    # Redireccionamos a la portada
-    return redirect('/')
-
 def dashboard(request):
     cargar_boton = False
     if str(request.user) == 'admin@admin':      
