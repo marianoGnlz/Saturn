@@ -4,6 +4,7 @@
 
     
 <div class="turno_list">
+    {% if turno %}
     <h2 class="welcome">
         Turno Solicitado con EXITO!
     </h2> 
@@ -23,14 +24,18 @@
             <td>{{turno.medico.nombre}}</td>
             <td>
 
-    <a href="/delete_turn" class="btn btn-primary">Cancelar</a>      
+                <a href="/delete_turn/{{turno.TurnoId}}" class="btn btn-primary">Cancelar</a>      
             </td>
         </tr>
        
         {% endfor %}
-        
+    
     </table>
+    {% else %}
+    <p>No hay Registro Encontrado.</p>
+    {% endif %} 
     <a href="/logout" class="btn btn-primary">Salir</a>
-    <a href="/new_turn" class="btn btn-primary">Solicitar otro turno</a>    
+    <a href="/new_turn" class="btn btn-primary">Solicitar otro turno</a> 
+      
 </div>
 {% endblock %}
