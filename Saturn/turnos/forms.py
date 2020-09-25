@@ -10,10 +10,11 @@ class MedicoModelChoiceField(forms.ModelChoiceField):
             raise ValidationError(self.error_messages['invalid_choice'], code='invalid_choice')
         else:
             value= value.first()
+        print(value)
         return value
 
 class TurnoForm(forms.ModelForm):
-    medico = MedicoModelChoiceField(queryset=Medico.objects.none())
+    medico = MedicoModelChoiceField(queryset = Medico.objects.none(), widget=forms.Select(attrs={'class': 'form-control turn'}))
     class Meta:
         model = Turno
         
@@ -33,7 +34,7 @@ class TurnoForm(forms.ModelForm):
         label = {
             'fecha_turno':'fecha_turno',
             'especialidad':'Especialidad',            
-            'medico':'Medico',
+            'medico':'Medico',      
             'obrasocial':'Obra Social',           
             'nombre':'Nombre',
             'dni':'DNI',
@@ -43,17 +44,15 @@ class TurnoForm(forms.ModelForm):
             'sexo':'Sexo',            
         }
         widgets = {
-            'fecha_turno':forms.DateInput(attrs={'class': 'form-control', 'type':'date'}),    
-            'fecha_registro':forms.DateInput(attrs={'class':'form-control'}),
-            'especialidad':forms.Select(attrs={'class':'form-control'}),
-            'medico':forms.Select(attrs={'class':'form-control'}),
-            'obrasocial':forms.Select(attrs={'class':'form-control'}),      
-            'nombre':forms.TextInput(attrs={'class':'form-control'}), 
-            'dni':forms.TextInput(attrs={'class':'form-control'}),
-            'edad':forms.NumberInput(attrs={'class':'form-control datepicker'}),
-            'telefono':forms.TextInput(attrs={'class':'form-control'}),       
-            'mail':forms.TextInput(attrs={'class':'form-control'}),      
-            'sexo':forms.Select(attrs={'class':'form-control'}),        
+            'fecha_turno':forms.DateInput(attrs={'class': 'form-control turn', 'type':'date'}),    
+            'fecha_registro':forms.DateInput(attrs={'class':'form-control turn'}),
+            'especialidad':forms.Select(attrs={'class':'form-control turn'}),
+            'medico':forms.Select(attrs={'class':'form-control turn'}),
+            'obrasocial':forms.Select(attrs={'class':'form-control turn'}),      
+            'nombre':forms.TextInput(attrs={'class':'form-control turn'}), 
+            'dni':forms.TextInput(attrs={'class':'form-control turn'}),
+            'edad':forms.NumberInput(attrs={'class':'form-control turn datepicker'}),
+            'telefono':forms.TextInput(attrs={'class':'form-control turn'}),       
+            'mail':forms.TextInput(attrs={'class':'form-control turn'}),      
+            'sexo':forms.Select(attrs={'class':'form-control turn'}),        
         }
-
-      
