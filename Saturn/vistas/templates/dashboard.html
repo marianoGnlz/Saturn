@@ -1,28 +1,28 @@
 {%  extends 'main.html' %}
 
 {% block content %}
-<div class="pepega-box">
+
+<div class="dash-box">
   <div class="container-fluid section-box">
     <div class="row d-flex justify-content-center h-100 align-items-center">
-      <div class="col-4">
+      <div class="col-12 col-xl-4">
         <div class="d-flex flex-column h-100">
-          <h1>
+          <h1 class="text-center">
             <span class="titulo-box">Bienvenido a Saturn</span>
           </h1>
-          <div class="text-Box">
+          <div class="text-box mx-5 text-center">
             <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. In dolore cupiditate doloribus iste quod quos recusandae molestias dolores iusto. Maiores corporis vel illo voluptate nihil neque eos quaerat adipisci quibusdam.</span>
           </div>
-          <a href="{% url 'new_turn' %}" class="btn btn-primary link-box">Solicitar Turno</a>
-          <a href="{% url 'turn_ok' %}" class="btn btn-primary link-box">Ver mis Turnos</a>
-
+          <div class="d-flex justify-content-center align-items-center">
+            <a href="{% url 'new_turn' %}" class="btn btn-primary link-box mx-2">Solicitar Turno</a>
+            <a href="{% url 'turn_ok' %}" class="btn btn-primary link-box mx-2">Ver mis Turnos</a>
+          </div>
         </div>
       </div>
       <div class="col-8">
-        <!-- <img src="../static/imagenes/elwa.png" alt="" class="elwachin"> -->
       </div>
     </div>
   </div>
-
 </div>
 
 {% endblock %}

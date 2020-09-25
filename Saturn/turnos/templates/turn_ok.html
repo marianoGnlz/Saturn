@@ -1,11 +1,12 @@
 {% extends 'main.html' %}
 
 {% block content %}
+
 <div class="usuario-bg">
-    <div class="col-4">
+    <div class="col-12 col-xl-4">
         <div class="turno_list">
-            <h2 class="welcome">
-                Turno Solicitado con EXITO!
+            <h2 class="welcome text-center">
+                Turno solicitado con exito
             </h2> 
             <table class="table";>
                 <tr>
@@ -23,7 +24,6 @@
                     <td>{{turno.medico.nombre}}</td>
                     <td>
                         <a class="btn btn-primary list" href="/delete_turn?id_turno={{turno.TurnoId}}">Cancelar</a>
-
                     </td>
                 </tr>
                 {% endfor %}         

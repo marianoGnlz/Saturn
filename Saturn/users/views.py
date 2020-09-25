@@ -34,7 +34,7 @@ def login(request):
         password = request.POST['password']
         print(username)
         print(password)
-        account = authenticate(username=username, password=password)
+        account = authenticate(request,username=username, password=password)
         print(account)
         if account is not None:
             do_login(request, account)

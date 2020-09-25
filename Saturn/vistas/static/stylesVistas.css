@@ -17,7 +17,23 @@ html, body {
 
 .turnos-content {
 	padding-top: 1rem;
-	padding-left: 3rem;
+}
+
+.btn-usuarios, .btn-turno, .link-box {
+	color: #fff;
+	font-weight: 700;
+	background-color: #15202b;
+	border-color: #15202b;
+}
+
+.btn-usuarios:hover, .btn-turno:hover, .link-box:hover {
+	background-color: #293D51;
+	border-color: #293D51;
+}
+
+.btn-usuarios:active, .btn-turno:active, .link-box:active {
+	background-color: #293D51 !important;
+	border-color: #293D51 !important;
 }
 
 .turnos-content input {
@@ -52,7 +68,7 @@ html, body {
 }
 
 
-.pepega-box {
+.dash-box {
 	background-image: url(imagenes/elwachin.png);
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -88,7 +104,7 @@ html, body {
 	background-color: #15202b;
 }
 
-.logo-sa{
+.logo-sa {
 	width: 4rem;
 }
 
@@ -107,10 +123,15 @@ html, body {
 	list-style: none;
 }
 
-/*.hello {
-	font-size: 1.5rem;
+.navbar-icon {
 	color: #fff;
-}*/
+	padding-top: 1.5rem;
+	font-size: 1.5rem;
+}
+
+.card-body-new{
+	margin-bottom: 90px;
+}
 
 .logout {
 	font-size: 1.5rem;
@@ -120,12 +141,7 @@ html, body {
 	font-weight: 700;
 }
 
-.link-box {
-	margin-top: .8rem;
-	width: 30%;
-	padding-top: 1rem;
-	font-weight: 700;
-}
+
 
 .footer {
 	background-color: #15202b;
@@ -218,13 +234,10 @@ html, body {
 	width: 30%;
 	padding-top: 1rem;
 	font-weight: 700;
-	background-color: #35A660;
-	border-color: #35A660;
 }
 
-.link-box:hover {
-	background-color: #186426;
-	border-color: #186426;
+label {
+	font-weight: 700;
 }
 
 .dropdown-item {
@@ -259,7 +272,7 @@ html, body {
 	.dropdown-item:focus,
 	.dropdown-item:hover {
 		background-color: transparent;
-		color: #43F584;
+		color: #33b1e3;
 	}
 
 	.dropdown, .dropleft, .dropright, .dropup {
@@ -283,5 +296,231 @@ html, body {
 @media (max-width: 991px) {
 	.dropdown {
 		display: none;
+	}
+}
+
+
+@media (max-width: 767px) {
+	.turnos-bg {
+		background-image: url(../../turnos/static/imagesturnos/fondomediaquery.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+		background-attachment: fixed;
+	}
+
+	.usuario-bg {
+		background-image: url(../../turnos/static/imagesturnos/fondomediaquery.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+		background-attachment: fixed;
+		height: 100%;
+	}
+
+	.dash-box {
+		background-image: url(imagenes/fondobody.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+		background-attachment: fixed;
+		height: 100%;
+	}
+
+	.titulo-box {
+		color: #fff;
+	}
+
+	.text-box {
+		color: #fff;
+	}
+
+	.btn-usuarios, .btn-turno, .link-box {
+		color: #fff;
+		font-weight: 700;
+		background-color: #15202b;
+		border-color: #15202b;
+	}
+
+	.btn-usuarios:hover, .btn-turno:hover, .link-box:hover {
+		background-color: #293D51;
+		border-color: #293D51;
+	}
+
+	.btn-usuarios:active, .btn-turno:active, .link-box:active {
+		background-color: #293D51 !important;
+		border-color: #293D51 !important;
+	}
+
+	.card-title {
+		color: #fff;
+	}
+
+	label {
+		color: #fff;
+	}
+
+	.dropdown-item:focus,
+	.dropdown-item:hover {
+		background-color: transparent;
+		color: #43F584;
+	}
+
+	.welcome, th {
+		color: #fff;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991.98px){
+	.turnos-bg {
+		background-image: url(../../turnos/static/imagesturnos/fondomediaquery.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+		background-attachment: fixed;
+		height: 100%;
+	}
+
+	.usuario-bg {
+		background-image: url(../../turnos/static/imagesturnos/fondomediaquery.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+		background-attachment: fixed;
+		height: 100%;
+	}
+
+	.dash-box {
+		background-image: url(imagenes/fondodashboardquery.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+		background-attachment: fixed;
+		height: 100%;
+	}
+
+	.section-box {
+		padding-left: 0.9375rem;
+	}
+
+	.card-title {
+		color: #fff;
+	}
+
+	label {
+		color: #fff;
+	}
+
+	.welcome, th {
+		color: #fff;
+	}
+
+	.titulo-box {
+		color: #fff;
+	}
+
+	.text-box {
+		color: #fff;
+	}
+
+	.btn-usuarios, .btn-turno, .link-box {
+		color: #fff;
+		font-size: 700;
+		background-color: #15202b;
+		border-color: #15202b;
+	}
+
+	.btn-usuarios:hover, .btn-turno:hover, .link-box:hover {
+		background-color: #293D51;
+		border-color: #293D51;
+	}
+
+	.btn-usuarios:active, .btn-turno:active, .link-box:active {
+		background-color: #293D51 !important;
+		border-color: #293D51 !important;
+	}
+
+	.dropdown-item:focus,
+	.dropdown-item:hover {
+		background-color: transparent;
+		color: #43F584;
+	}
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+	.turnos-bg {
+		background-image: url(../../turnos/static/imagesturnos/fondomediaquery.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+		background-attachment: fixed;
+		height: 100%;
+	}
+
+	.usuario-bg {
+		background-image: url(../../turnos/static/imagesturnos/fondomediaquery.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+		background-attachment: fixed;
+		height: 100%;
+	}
+
+	.dash-box {
+		background-image: url(imagenes/fondobody.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+		background-attachment: fixed;
+		height: 100%;
+	}
+
+	.card-title {
+		color: #fff;
+	}
+
+	label {
+		color: #fff;
+	}
+
+	.section-box {
+		padding-left: 0;
+	}
+
+	.welcome, th {
+		color: #fff;
+	}
+
+	.btn-usuarios, .btn-turno, .link-box {
+		color: #fff;
+		font-size: 700;
+		background-color: #15202b;
+		border-color: #15202b;
+	}
+
+	.btn-usuarios:hover, .btn-turno:hover, .link-box:hover {
+		background-color: #293D51;
+		border-color: #293D51;
+	}
+
+	.btn-usuarios:active, .btn-turno:active, .link-box:active {
+		background-color: #293D51 !important;
+		border-color: #293D51 !important;
+	}
+
+	.dropdown-item:focus,
+	.dropdown-item:hover {
+		background-color: transparent;
+		color: #43F584;
+	}
+}
+
+@media (min-width: 1200px){
+	.turnos-bg {
+		background-image: url(../../turnos/static/imagesturnos/eldotorregistro.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+		background-attachment: fixed;
 	}
 }
