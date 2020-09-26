@@ -2,26 +2,30 @@
 
 {% block content %}
 
-<div class="container-fluid section-box">
-  <div class="row d-flex justify-content-center h-100 align-items-center">
-    <div class="col-4">
-      <div class="d-flex flex-column h-100">
-        <h1>
-          <span class="titulo-box">Bienvenido a Saturn</span>
-        </h1>
-        <div class="text-Box">
-          <h3>Bienvenido al Sistema de Gestión de Turnos</h3>
-          <p>La nueva herramienta para acceder a citas médicas de forma rápida y de forma online</p>
-          {% if cargar_boton%}
-          <a href="/new_turn/" class="btn btn-primary">Solicitar Turno Particular</a>
-          <a href="/turn_ok/" class="btn btn-primary">Ver Turnos Particulares</a>
-          <a href="/listado_del_dia/" class="btn btn-primary ">Ver Turnos del dia</a>
+<div class="dash-box">
+  <div class="container-fluid section-box">
+    <div class="row d-flex justify-content-center h-100 align-items-center">
+      <div class="col-12 col-xl-4">
+        <div class="d-flex flex-column h-100">
+          <h1 class="text-center">
+            <span class="titulo-box">Bienvenido al sistema de gestión de turnos Saturn</span>
+          </h1>
+          <div class="text-box mx-5 text-center">
+          <p>La nueva herramienta para acceder a citas médicas de forma rápida y online</p>
+          </div>
+          <div class="d-flex justify-content-center align-items-center">
+            {% if cargar_boton%}
+          <a href="/new_turn/" class="btn btn-primary link-box mx-2">Solicitar Turno Particular</a>
+          <a href="/turn_ok/" class="btn btn-primary link-box mx-2">Ver Turnos Particulares</a>
+          <a href="/listado_del_dia/" class="btn btn-primary link-box mx-2">Ver Turnos del dia</a>
           {% else %}
-          <a href="/new_turn/" class="btn btn-primary ">Solicitar Turno</a>
-          <a href="/turn_ok/" class="btn btn-primary ">Ver mis Turnos</a>
+          <a href="/new_turn/" class="btn btn-primary link-box mx-2">Solicitar Turno</a>
+          <a href="/turn_ok/" class="btn btn-primary link-box mx-2">Ver mis Turnos</a>
           {% endif %}
-                     
-        </div>    
+          </div>
+        </div>
+      </div>
+      <div class="col-8">
       </div>
     </div>
   </div>
