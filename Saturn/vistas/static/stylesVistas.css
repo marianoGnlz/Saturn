@@ -2,33 +2,135 @@
 	font-family: 'Baloo Tammudu 2', cursive; 
 }
 
-body {
-	/*background-image: url(imagenes/elwachin.png);*/
-	background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
+html, body {
+	height: 100%;
+	margin: 0; 
 }
 
-html, body {
+.turnos-bg {
+	background-image: url(imagenes/elwachin.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+}
+
+.turnos-content {
+	padding-top: 1rem;
+}
+
+.btn-usuarios, .btn-turno, .link-box, .btn-cancel {
+	color: #fff;
+	font-weight: 700;
+	background-color: #15202b;
+	border-color: #15202b;
+}
+
+.btn-usuarios:hover, .btn-turno:hover, .link-box:hover, .btn-cancel:hover {
+	background-color: #293D51;
+	border-color: #293D51;
+}
+
+.btn-usuarios:active, .btn-turno:active, .link-box:active, .btn-cancel:active {
+	background-color: #293D51 !important;
+	border-color: #293D51 !important;
+}
+
+.turnos-content input {
+	padding-top: .9rem;
+	height: 2rem;
+	border: 1px solid #111;
+}
+
+.turnos-content select {
+	padding-top: .2rem;
+	border: 1px solid #111;
+}
+
+.turnos-content input[type="date"]::-webkit-inner-spin-button {
+	margin: 0;
+}
+.turnos-content input[type="date"]::-webkit-calendar-picker-indicator {
+	margin: 0;
+	padding-bottom: .6rem;
+}
+
+.btn-turno {
+	padding-top: .8rem;
+	width: 7rem;
+	font-weight: 700;
+}
+
+.card-title {
+	font-weight: 800;
+	font-size: 2.5rem;
+	padding-top: 7rem;
+}
+
+
+.dash-box {
+	background-image: url(imagenes/elwachin.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+	height: 100%;
+}
+
+.usuario-bg {
+	background-image: url(imagenes/form.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+	height: 100%;
+}
+
+
+.admin-bg {
+    background-image: url(imagenes/fondo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
     height: 100%;
-    margin: 0; 
+}
+
+.btn-usuarios {
+	padding-top: 1rem;	
+}
+
+.welcome {
+	padding-top: 7rem;
+	font-weight: 700;
+}
+
+.cancel {
+	padding-top: 7rem;
+	font-weight: 700;
+	padding-left: 1rem;
 }
 
 .section-box {
-	margin: 5rem 0 !important;
-	padding-left: 15rem;
+	padding-top: 20rem;
+	padding-left: 7rem;
 }
 
 .navbar {
 	background-color: #15202b;
 }
 
-.img-fluid{
+.logo-sa {
 	width: 4rem;
 }
 
 .nav-link {
 	font-size: 2rem;
+	color: #fff;
+	font-size: 1.7rem;
+}
+
+.nav-link:hover {
 	color: #fff;
 }
 
@@ -37,10 +139,14 @@ html, body {
 	list-style: none;
 }
 
-.hello {
-	font-size: 1.5rem;
-	margin-right: 1rem;
+.navbar-icon {
 	color: #fff;
+	padding-top: 1.5rem;
+	font-size: 1.5rem;
+}
+
+.card-body-new{
+	margin-bottom: 90px;
 }
 
 .logout {
@@ -51,10 +157,18 @@ html, body {
 	font-weight: 700;
 }
 
-.link-box {
-	margin-top: .8rem;
-	width: 30%;
-	padding-top: 1rem;
+.btn-cancel {
+	padding-top: .8rem;
+    font-weight: 700;
+    margin-left: 3rem;
+}
+/*.no-reg {
+	padding-top: 6rem;
+	font-weight: 700;
+}*/
+
+.turno-list {
+	padding-top: 6rem;
 	font-weight: 700;
 }
 
@@ -63,13 +177,46 @@ html, body {
 	position: fixed;
 	bottom: 0;
 	width: 100%;
-	height: 3.5rem;
+	height: 4rem;
 	line-height: 1.8rem;
 }
 
 .navbar-toggler:focus {
 	outline: 1px solid;
 	border-radius: .25rem;
+}
+
+.btn-secondary {
+	background-color: transparent;
+	border-color: transparent;
+	font-size: 1.4rem;
+	padding-top: .8rem;
+}
+
+.btn-secondary:focus {
+	background-color: transparent;
+	border-color: transparent;
+	box-shadow: none;
+}
+
+.btn-secondary:active {
+	background-color: transparent;
+	box-shadow: none;
+}
+
+.btn-secondary:hover {
+	background-color: transparent;
+	border-color: transparent;
+}
+
+.btn-secondary:not(:disabled):not(.disabled).active, .btn-secondary:not(:disabled):not(.disabled):active, .show>.btn-secondary.dropdown-toggle {
+	background-color: transparent;
+	border-color: transparent;
+	box-shadow: none;
+}
+
+.btn-secondary:not(:disabled):not(.disabled).active:focus, .btn-secondary:not(:disabled):not(.disabled):active:focus, .show>.btn-secondary.dropdown-toggle:focus {
+	box-shadow: none;
 }
 
 .fa-twitter, .fa-facebook-f, .fa-github {
@@ -97,10 +244,312 @@ html, body {
 	font-weight: 700;
 }
 
+.fa-bars {
+	color: #fff;
+	padding-top: .4rem;
+}
+
+.navbar-light .navbar-toggler {
+	border-color: #fff;
+}
+
 .footer-atencion:hover {
 	text-decoration: none;
 }
 
-.btn:not(:disabled):not(.disabled) {
-	margin-bottom: 10px !important;
+
+.link-box {
+	margin-top: .8rem;
+	width: 30%;
+	padding-top: 1rem;
+	font-weight: 700;
+}
+
+label {
+	font-weight: 700;
+}
+
+.dropdown-item {
+	color: #fff;
+}
+
+.navbar-toggler {
+	border: 1px solid #fff;
+}
+
+
+@media (min-width: 992px) {
+	.dropdown-menu {
+		right: 0;
+		left: auto;
+		background-color: #15202b;
+		border: 0;
+		border-radius: 0;
+		padding-top: 2rem;
+		width: 15%;
+		top: auto;
+	}
+
+	.dropdown-item {
+		color: #fff;
+		margin-bottom: 1rem;
+		font-weight: 700;
+		font-size: 1.3rem;
+		text-align: center;
+	}
+
+	.dropdown-item:focus,
+	.dropdown-item:hover {
+		background-color: transparent;
+		color: #33b1e3;
+	}
+
+	.dropdown, .dropleft, .dropright, .dropup {
+		position: inherit;
+	}
+
+	.dropdown .dropdown-menu {
+		transition: all 0.7s;
+		overflow: hidden;
+		opacity: 0;
+		z-index: -1;
+	}
+
+	.dropdown.show .dropdown-menu {
+		max-height: 300px;
+		opacity: 1;
+		z-index: 1;
+	}
+}
+
+@media (max-width: 991px) {
+	.dropdown {
+		display: none;
+	}
+}
+
+
+@media (max-width: 767px) {
+	.turnos-bg {
+		background-image: url(imagenes/fondomediaquery.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+		background-attachment: fixed;
+	}
+
+	.usuario-bg {
+		background-image: url(imagenes/fondodashboardquery.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+		background-attachment: fixed;
+		height: 100%;
+	}
+
+	.dash-box {
+		background-image: url(imagenes/fondobody.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+		background-attachment: fixed;
+		height: 100%;
+	}
+
+	.titulo-box {
+		color: #fff;
+	}
+
+	.text-box {
+		color: #fff;
+	}
+
+	.btn-usuarios, .btn-turno, .link-box {
+		color: #fff;
+		font-weight: 700;
+		background-color: #15202b;
+		border-color: #15202b;
+	}
+
+	.btn-usuarios:hover, .btn-turno:hover, .link-box:hover {
+		background-color: #293D51;
+		border-color: #293D51;
+	}
+
+	.btn-usuarios:active, .btn-turno:active, .link-box:active {
+		background-color: #293D51 !important;
+		border-color: #293D51 !important;
+	}
+
+	.card-title {
+		color: #fff;
+	}
+
+	label {
+		color: #fff;
+	}
+
+	.dropdown-item:focus,
+	.dropdown-item:hover {
+		background-color: transparent;
+		color: #43F584;
+	}
+
+	.welcome, th {
+		color: #fff;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991.98px){
+	.turnos-bg {
+		background-image: url(imagenes/fondomediaquery.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+		background-attachment: fixed;
+		height: 100%;
+	}
+
+	.usuario-bg {
+		background-image: url(imagenes/fondomediaquery.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+		background-attachment: fixed;
+		height: 100%;
+	}
+
+	.dash-box {
+		background-image: url(imagenes/fondodashboardquery.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+		background-attachment: fixed;
+		height: 100%;
+	}
+
+	.section-box {
+		padding-left: 0.9375rem;
+	}
+
+	.card-title {
+		color: #fff;
+	}
+
+	label {
+		color: #fff;
+	}
+
+	.welcome, th {
+		color: #fff;
+	}
+
+	.titulo-box {
+		color: #fff;
+	}
+
+	.text-box {
+		color: #fff;
+	}
+
+	.btn-usuarios, .btn-turno, .link-box {
+		color: #fff;
+		font-size: 700;
+		background-color: #15202b;
+		border-color: #15202b;
+	}
+
+	.btn-usuarios:hover, .btn-turno:hover, .link-box:hover {
+		background-color: #293D51;
+		border-color: #293D51;
+	}
+
+	.btn-usuarios:active, .btn-turno:active, .link-box:active {
+		background-color: #293D51 !important;
+		border-color: #293D51 !important;
+	}
+
+	.dropdown-item:focus,
+	.dropdown-item:hover {
+		background-color: transparent;
+		color: #43F584;
+	}
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+	.turnos-bg {
+		background-image: url(imagenes/fondomediaquery.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+		background-attachment: fixed;
+		height: 100%;
+	}
+
+	.usuario-bg {
+		background-image: url(imagenes/fondomediaquery.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+		background-attachment: fixed;
+		height: 100%;
+	}
+
+	.dash-box {
+		background-image: url(imagenes/fondobody.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+		background-attachment: fixed;
+		height: 100%;
+	}
+
+	.card-title {
+		color: #fff;
+	}
+
+	label {
+		color: #fff;
+	}
+
+	.section-box {
+		padding-left: 0;
+	}
+
+	.welcome, th, td {
+		color: #fff;
+	}
+
+	.btn-usuarios, .btn-turno, .link-box {
+		color: #fff;
+		font-size: 700;
+		background-color: #15202b;
+		border-color: #15202b;
+	}
+
+	.btn-usuarios:hover, .btn-turno:hover, .link-box:hover {
+		background-color: #293D51;
+		border-color: #293D51;
+	}
+
+	.btn-usuarios:active, .btn-turno:active, .link-box:active {
+		background-color: #293D51 !important;
+		border-color: #293D51 !important;
+	}
+
+	.dropdown-item:focus,
+	.dropdown-item:hover {
+		background-color: transparent;
+		color: #43F584;
+	}
+}
+
+@media (min-width: 1200px){
+	.turnos-bg {
+		background-image: url(imagenes/eldotorregistro.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+		background-attachment: fixed;
+	}
 }

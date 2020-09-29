@@ -1,4 +1,4 @@
-.card-body-new {
+/*.card-body-new {
     margin-bottom: 90px !important;
     padding-left: 20px;
     margin-top: 20px;
@@ -42,4 +42,51 @@
     text-align: center !important;
     margin-top: 45px !important;
     margin-bottom: 20px !important;
+}
+
+*/
+
+.botton{
+    padding-top: 10rem;
+    font-weight: 700;
+    font-size: 1.5rem;
+    padding-left: 9rem;
+    width: 100%;
+    color: #fff;
+}
+
+/*.table tr, th, td {
+    border-bottom: 1px solid #111;
+    text-align: center;
+    vertical-align: middle
+}*/
+
+.titulo-admin {
+    margin-top: 5rem;
+    font-weight: 700;
+    font-size: 2rem;
+
+}
+
+.btn-buscar {
+    padding-top: 1.7rem;
+}
+
+.turn {
+    padding-top: 0.2rem;
+    padding-left: .7rem;
+    font-weight: 700;
+}
+
+.titulo-doctor {
+    font-weight: 700;
+    color: #fff;
+}
+
+th, td, label {
+    color: #fff;
+}
+
+.card-title {
+    color: #fff;
 }

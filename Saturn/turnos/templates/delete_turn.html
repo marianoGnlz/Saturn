@@ -1,11 +1,15 @@
 {% extends 'main.html' %}
 
 {% block content %}
-
-<h2 class="welcome">
-    Su turno fue CANCELADO!
-</h2>
-<a href="/dashboard" class="btn btn-primary">Inicio</a>
-<a href="/turn_ok" class="btn btn-primary">Ver Mis Turnos</a>    
+<div class="usuario-bg">
+	<div class="col-12 col-xl-4">
+		<h2 class="cancel">
+	    Su turno fue CANCELADO!
+		</h2>
+		<a href="/dashboard" class="btn btn-primary btn-cancel ml-3">Inicio</a>
+		<a href="/turn_ok" class="btn btn-primary btn-cancel mx-1">Ver Mis Turnos</a>
+	</div>
+</div>
+    
 
 {% endblock %}

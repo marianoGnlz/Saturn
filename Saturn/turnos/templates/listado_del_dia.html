@@ -1,77 +1,78 @@
 {% extends 'main.html' %}
 
 {% block content %}
-
-<h2 class="card-title text-center">Listar turnos diarios de Medicos</h2>
-
-<form method="POST">        
-    {% csrf_token %}
-    <div class="row">
-        <div class="col-xs-12 col-md-5">
-            <div class="form-group">
-                <label  class="">Buscar por Médico</label>
-                <select class="form-control turn" name="listado_medico" required id="id_listado_medico">
-                    <option value="-1">-------------</option>
-                    {% for medico in medicos %}
-                        <option value="{{medico.medicoId}}">{{medico.nombre}}</option>
-                    {% endfor %}
-                </select>         
+<div class="admin-bg">
+    <div class="d-flex">
+    <div class="col-4">
+        <form method="POST"> 
+            <h2 class="card-title text-center">Turnos diarios de Medicos</h2>
+            {% csrf_token %}
+            <div class="row">
+                <div class="col-xl-8 col-4">
+                    <div class="form-group">
+                        <label  class="">Buscar por Médico</label>
+                        <select class="form-control turn" name="listado_medico" required id="id_listado_medico">
+                            <option value="-1">-------------</option>
+                            {% for medico in medicos %}
+                            <option value="{{medico.medicoId}}">{{medico.nombre}}</option>
+                            {% endfor %}
+                        </select>         
+                    </div>
+                </div>            
+                <div class="btn-buscar">
+                    <button type="submit" class="btn btn-primary btn-usuarios">Buscar</button>
+                    <a href="/dashboard" class="btn btn-primary btn-usuarios">Volver</a>
+                </div>
+                
             </div>
-        </div>            
-        <div class="col-xs-12 col-md-7">
-            <button type="submit" class="btn btn-primary listar">Buscar</button>
+        </form>
+    </div>
+
+    {%if turnos_del_dia %}
+
+    <div class="col-8 mt-5">
+        <div class="turno_list">
+            <div id="areaImprimirTurnos">
+
+                <div style="font-size: 1.5rem;
+                text-align: center;
+                margin-top: 3.8rem;
+                margin-bottom: 1.25rem;" class="titulo-doctor">Turnos del medico {{nombre_medico}}</div>
+                <table class="table" style="width: 100%">
+
+                    <tr>
+                        <th style="border-bottom: 1px solid #dee2e6; text-align: center" class="th-turn" scope="row">DIA </th>
+                        <th style="border-bottom: 1px solid #dee2e6; text-align: center;" class="th-turn" scope="row">NOMBRE </th>
+                        <th style="border-bottom: 1px solid #dee2e6; text-align: center;" class="th-turn" score="row">HORA</th>
+                        <th style="border-bottom: 1px solid #dee2e6; text-align: center;" class="th-turn" scope="row">ESPECIALIDAD</th>
+                        <th style="border-bottom: 1px solid #dee2e6; text-align: center;" class="th-turn" scope="row">MEDICO</th>         
+                    </tr>
+
+                    {% for turno in turnos_del_dia %}
+                    <tr>
+                        <td style="border-bottom: 1px solid #dee2e6; text-align: center;" class="td-turn">{{turno.fecha_turno}}</td>
+                        <td style="border-bottom: 1px solid #dee2e6; text-align: center;" class="td-turn">{{turno.nombre}}</td>
+                        <td style="border-bottom: 1px solid #dee2e6; text-align: center;" class="td-turn">{{turno.hora_turno}}</td>
+                        <td style="border-bottom: 1px solid #dee2e6; text-align: center;" class="td-turn">{{turno.especialidad.descripcion}}</td>
+                        <td style="border-bottom: 1px solid #dee2e6; text-align: center;" class="td-turn">{{turno.medico.nombre}}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+            {% elif nombre_medico and turnos_del_dia|length == 0 %}
+            <div class="botton d-flex justify-content-center align-items-center">No hay turnos resgitrados para el medico {{nombre_medico}}</div>
+            {%endif%}
+                
+                {%if turnos_del_dia %}
+                <button id="imprimirListadoTurnos" class="btn btn-primary btn-usuarios">Imprimir</button>
+                {%endif%}
+                
         </div>
     </div>
-</form>
-
-{%if turnos_del_dia %}
-    
-<div class="turno_list">
-
-    <div id="areaImprimirTurnos">
-
-        <div style="font-size: 24px;
-        text-align: center;
-        margin-top: 45px;
-        margin-bottom: 20px;">Turnos del medico: {{nombre_medico}}</div>
-
-        <table class="table" style="width: 100%;">
-            <tr>
-                <th style="border-bottom: 1px solid #dee2e6; text-align: center" class="th-turn" scope="row">DIA </th>
-                <th style="border-bottom: 1px solid #dee2e6; text-align: center;" class="th-turn" scope="row">NOMBRE </th>
-                <th style="border-bottom: 1px solid #dee2e6; text-align: center;" class="th-turn" score="row">HORA</th>
-                <th style="border-bottom: 1px solid #dee2e6; text-align: center;" class="th-turn" scope="row">ESPECIALIDAD</th>
-                <th style="border-bottom: 1px solid #dee2e6; text-align: center;" class="th-turn" scope="row">MEDICO</th>         
-            </tr>
-           
-            {% for turno in turnos_del_dia %}
-            <tr>
-                <td style="border-bottom: 1px solid #dee2e6; text-align: center;" class="td-turn">{{turno.fecha_turno}}</td>
-                <td style="border-bottom: 1px solid #dee2e6; text-align: center;" class="td-turn">{{turno.nombre}}</td>
-                <td style="border-bottom: 1px solid #dee2e6; text-align: center;" class="td-turn">{{turno.hora_turno}}</td>
-                <td style="border-bottom: 1px solid #dee2e6; text-align: center;" class="td-turn">{{turno.especialidad.descripcion}}</td>
-                <td style="border-bottom: 1px solid #dee2e6; text-align: center;" class="td-turn">{{turno.medico.nombre}}</td>
-            </tr>
-            {% endfor %}
-
-            
-        </table>
-    </div>
-
-{% elif nombre_medico and turnos_del_dia|length == 0 %}
-<div class="botton">No hay turnos resgitrados para el medico: {{nombre_medico}}</div>
-
-{%endif%}
-
-    <div style="margin-bottom: 80px;">
-        <a href="/dashboard/" class="btn btn-primary">Volver</a>
-        {%if turnos_del_dia %}
-        <button id="imprimirListadoTurnos" class="btn btn-primary links">Imprimir</button>
-        {%endif%}
-    </div>
-
+</div> 
 </div>
-     
+
 
 
 {% endblock %}
+
