@@ -61,10 +61,11 @@
     vertical-align: middle
 }*/
 
-.titulo-admin {
-    margin-top: 5rem;
+.title-admin {
+    margin-top: 10rem;
     font-weight: 700;
     font-size: 2rem;
+    color: #fff;
 
 }
 
@@ -83,10 +84,6 @@
     color: #fff;
 }
 
-th, td, label {
-    color: #fff;
-}
-
-.card-title {
+.th-turn, .td-turn, .label-admin {
     color: #fff;
 }
