@@ -13,4 +13,7 @@ def dashboard(request):
         'cargar_boton': cargar_boton, 
     }
     return render(request, "dashboard.html", context)
+
+def login(request):
+	return render(request, 'login.html')
  

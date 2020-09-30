@@ -101,7 +101,7 @@ html, body {
 }
 
 .welcome {
-	padding-top: 7rem;
+	padding-top: 2rem;
 	font-weight: 700;
 }
 
@@ -162,10 +162,6 @@ html, body {
     font-weight: 700;
     margin-left: 3rem;
 }
-/*.no-reg {
-	padding-top: 6rem;
-	font-weight: 700;
-}*/
 
 .turno-list {
 	padding-top: 6rem;
@@ -322,11 +318,6 @@ label {
 	}
 }
 
-@media (max-width: 991px) {
-	.dropdown {
-		display: none;
-	}
-}
 
 
 @media (max-width: 767px) {
@@ -410,6 +401,10 @@ label {
 		height: 100%;
 	}
 
+	.dropdown {
+		display: none;
+	}
+
 	.usuario-bg {
 		background-image: url(imagenes/fondomediaquery.png);
 		background-repeat: no-repeat;
@@ -474,6 +469,10 @@ label {
 		background-color: transparent;
 		color: #43F584;
 	}
+
+	.table td, .table th {
+		color: #fff;
+	}
 }
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
@@ -504,9 +503,9 @@ label {
 		height: 100%;
 	}
 
-/*	.card-title {
+	.titulo-box, p{
 		color: #fff;
-	}*/
+	}
 
 	label {
 		color: #fff;
@@ -544,12 +543,30 @@ label {
 	}
 }
 
-@media (min-width: 1200px){
+@media (min-width: 1200px) and (max-width: 1400px){
 	.turnos-bg {
 		background-image: url(imagenes/eldotorregistro.png);
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center center;
 		background-attachment: fixed;
+	}
+
+	.section-box {
+    padding-top: 12rem;
+    padding-left: 7rem;
+}
+
+
+}
+
+@media (min-width: 1401px) {
+	.turnos-bg {
+		background-image: url(imagenes/eldotorregistro.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+		background-attachment: fixed;
+		height: 100%;
 	}
 }
