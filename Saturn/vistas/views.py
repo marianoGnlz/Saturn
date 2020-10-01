@@ -14,3 +14,5 @@ def dashboard(request):
     }
     return render(request, "dashboard.html", context)
  
+def initial(request):
+	return render(request, "initial.html")
