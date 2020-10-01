@@ -87,9 +87,9 @@ WSGI_APPLICATION = 'Saturn.wsgi.application'
 DATABASES = {
    'default': {
      'ENGINE': 'django.db.backends.mysql',
-      'NAME': 'saturn',
-      'USER': 'root',
-      'PASSWORD':'',
+      'NAME': 'djangodatabase',
+      'USER': 'saturnadmin',
+      'PASSWORD':'12345',
       'HOST':'127.0.0.1',
       'PORT':'3306',
       'OPTIONS': {
