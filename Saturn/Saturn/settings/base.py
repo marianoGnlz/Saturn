@@ -26,7 +26,7 @@ SECRET_KEY = 'c&o7#gf*#7o9=c%ng-8zwn2xofage^*=c=*_34^)&pvqqu=@be'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['DeployPythonTest.pythonanywhere.com']
 
 
 # Application definition
@@ -87,10 +87,10 @@ WSGI_APPLICATION = 'Saturn.wsgi.application'
 DATABASES = {
    'default': {
      'ENGINE': 'django.db.backends.mysql',
-      'NAME': 'saturn',
-      'USER': 'root',
-      'PASSWORD':'',
-      'HOST':'127.0.0.1',
+      'NAME': 'DeployPythonTest$databasedjango',
+      'USER': 'DeployPythonTest',
+      'PASSWORD':'saturn123456',
+      'HOST':'DeployPythonTest.mysql.pythonanywhere-services.com',
       'PORT':'3306',
       'OPTIONS': {
            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
@@ -141,12 +141,12 @@ AUTH_USER_MODEL = 'users.Registro'
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
-
+STATIC_ROOT = '/home/DeployPythonTest/static'
 
 
 STATICFILES_DIRS = (
-    os.path.join(os.path.dirname(BASE_DIR) + "\\Saturn\\users", 'static'),
-    os.path.join(os.path.dirname(BASE_DIR) + "\\Saturn\\turnos", 'static'),
+    os.path.join(os.path.dirname(BASE_DIR) + "/users", 'static'),
+    os.path.join(os.path.dirname(BASE_DIR) + "/turnos", 'static'),
 )
 
 SILENCED_SYSTEM_CHECKS = [
