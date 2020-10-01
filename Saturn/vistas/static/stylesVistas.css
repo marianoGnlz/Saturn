@@ -101,7 +101,7 @@ html, body {
 }
 
 .welcome {
-	padding-top: 7rem;
+	padding-top: 2rem;
 	font-weight: 700;
 }
 
@@ -162,10 +162,6 @@ html, body {
     font-weight: 700;
     margin-left: 3rem;
 }
-/*.no-reg {
-	padding-top: 6rem;
-	font-weight: 700;
-}*/
 
 .turno-list {
 	padding-top: 6rem;
@@ -276,8 +272,11 @@ label {
 .navbar-toggler {
 	border: 1px solid #fff;
 }
+.display-small-screen{
+	display: inline;
+}
 
-
+/* 
 @media (min-width: 992px) {
 	.dropdown-menu {
 		right: 0;
@@ -320,16 +319,18 @@ label {
 		opacity: 1;
 		z-index: 1;
 	}
-}
+} */
 
-@media (max-width: 991px) {
-	.dropdown {
+
+/*iPads y tablets*/
+@media  (min-width: 320px) and (max-width: 768px) {
+	.display-small-screen{
 		display: none;
 	}
-}
-
-
-@media (max-width: 767px) {
+	.section-box {
+		padding-top: 8rem;
+		padding-left: 1rem;
+	}
 	.turnos-bg {
 		background-image: url(imagenes/fondomediaquery.png);
 		background-repeat: no-repeat;
@@ -399,8 +400,11 @@ label {
 		color: #fff;
 	}
 }
-
-@media (min-width: 768px) and (max-width: 991.98px){
+/*Small screens, laptops*/
+@media  (min-width: 768px) and (max-width: 1024px){
+	.display-small-screen{
+		display: inline;
+	}
 	.turnos-bg {
 		background-image: url(imagenes/fondomediaquery.png);
 		background-repeat: no-repeat;
@@ -408,6 +412,10 @@ label {
 		background-position: center center;
 		background-attachment: fixed;
 		height: 100%;
+	}
+
+	.dropdown {
+		display: none;
 	}
 
 	.usuario-bg {
@@ -474,9 +482,13 @@ label {
 		background-color: transparent;
 		color: #43F584;
 	}
-}
 
-@media (min-width: 992px) and (max-width: 1199.98px) {
+	.table td, .table th {
+		color: #fff;
+	}
+}
+/*Desktop, large screen*/
+@media (min-width: 1025px) and (max-width: 1200px) {
 	.turnos-bg {
 		background-image: url(imagenes/fondomediaquery.png);
 		background-repeat: no-repeat;
@@ -504,9 +516,9 @@ label {
 		height: 100%;
 	}
 
-/*	.card-title {
+	.titulo-box, p{
 		color: #fff;
-	}*/
+	}
 
 	label {
 		color: #fff;
@@ -544,12 +556,30 @@ label {
 	}
 }
 
-@media (min-width: 1200px){
+@media (min-width: 1200px) and (max-width: 1400px){
 	.turnos-bg {
 		background-image: url(imagenes/eldotorregistro.png);
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center center;
 		background-attachment: fixed;
+	}
+
+	.section-box {
+    padding-top: 12rem;
+    padding-left: 7rem;
+}
+
+
+}
+
+@media (min-width: 1401px) {
+	.turnos-bg {
+		background-image: url(imagenes/eldotorregistro.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+		background-attachment: fixed;
+		height: 100%;
 	}
 }
