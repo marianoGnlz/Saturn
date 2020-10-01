@@ -50,9 +50,9 @@ class TurnoForm(forms.ModelForm):
             'medico':forms.Select(attrs={'class':'form-control turn'}),
             'obrasocial':forms.Select(attrs={'class':'form-control turn'}),      
             'nombre':forms.TextInput(attrs={'class':'form-control turn'}), 
-            'dni':forms.TextInput(attrs={'class':'form-control turn'}),
-            'edad':forms.NumberInput(attrs={'class':'form-control turn datepicker'}),
-            'telefono':forms.TextInput(attrs={'class':'form-control turn'}),       
-            'mail':forms.TextInput(attrs={'class':'form-control turn'}),      
+            'dni':forms.NumberInput(attrs={'class':'form-control turn', 'min':'0'}),
+            'edad':forms.NumberInput(attrs={'class':'form-control turn datepicker', 'min':'0'}),
+            'telefono':forms.TextInput(attrs={'class':'form-control turn', 'type': 'tel'}),       
+            'mail':forms.TextInput(attrs={'class':'form-control turn', 'type':'mail'}),      
             'sexo':forms.Select(attrs={'class':'form-control turn'}),        
         }
