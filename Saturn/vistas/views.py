@@ -13,4 +13,6 @@ def dashboard(request):
         'cargar_boton': cargar_boton, 
     }
     return render(request, "dashboard.html", context)
-
+ 
+def initial(request):
+	return render(request, "initial.html")
