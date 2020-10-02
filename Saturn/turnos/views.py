@@ -74,7 +74,7 @@ def combo_horario(request):
 def turn_ok(request):    
     registro = Registro.objects.get(email=request.user)
     turno = Turno.objects.filter(usuario_id=registro.idUsuario)
-    paginator = Paginator(turno, 3)
+    paginator = Paginator(turno, 4)
     try:
         page = int(request.GET.get('page', '1'))
     except:

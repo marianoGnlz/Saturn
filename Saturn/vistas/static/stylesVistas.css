@@ -275,7 +275,7 @@ label {
 }
 
 
-/*@media (min-width: 992px) {
+@media (min-width: 992px) {
 	.dropdown-menu {
 		right: 0;
 		left: auto;
@@ -318,7 +318,7 @@ label {
 		z-index: 1;
 	}
 }
-*/
+
 .display-small-screen{
 	display: inline;
 }
