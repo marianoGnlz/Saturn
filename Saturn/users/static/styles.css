@@ -121,6 +121,10 @@ body {
 	box-shadow: none;
 }
 
+.error li{
+	display: block;
+}
+
 .btn-primary:hover {
 	background-color: transparent;
 	border-color: #fff;

@@ -24,6 +24,8 @@ def register(request):
             account = form.save()
             do_login(request, account)
             return redirect('dashboard')
+        else:
+            return render(request, "register.html", {'form': form})
 
     form = RegistroForm()
     # Si llegamos al final renderizamos el formulario
@@ -37,6 +39,11 @@ def login(request):
         if account is not None:
             do_login(request, account)
             return redirect('dashboard')
+        else:
+            context = {
+                'error': 'Cuenta o contraseña incorrecta.'
+            }
+            return render(request, "login.html", context)
             
     return render(request, "login.html")
 

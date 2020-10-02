@@ -59,12 +59,16 @@
                 >Mantenerse logeado</label
               >
             </div>
+            {% if error == 'Cuenta o contraseña incorrecta.' %}
+              <div class="alert alert-danger">
+                {{error}}
+              </div>
+            {% endif %}
             <div class="botones-login">
               <button type="submit" class="btn btn-primary mt-2 mb-2 pt-3 btn-login">Iniciar Sesión</button>
               <a href="{% url 'register' %}" class="btn-registro btn btn-primary mt-2 mb-2 btn-login">Registrarte</a>
             </div>
             <div>
-              
             </div>            
           </form>
          <br>
