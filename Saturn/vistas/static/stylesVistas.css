@@ -88,20 +88,21 @@ html, body {
 
 
 .admin-bg {
-    background-image: url(imagenes/fondo.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
-    height: 100%;
+	background-image: url(imagenes/fondo.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+	height: 100%;
 }
 
 .btn-usuarios {
-	padding-top: 1rem;	
+	padding: 0.4rem;
+    padding-top: 0.8rem;	
 }
 
 .welcome {
-	padding-top: 2rem;
+	padding-top: 0.5rem;
 	font-weight: 700;
 }
 
@@ -159,8 +160,8 @@ html, body {
 
 .btn-cancel {
 	padding-top: .8rem;
-    font-weight: 700;
-    margin-left: 3rem;
+	font-weight: 700;
+	margin-left: 3rem;
 }
 
 .turno-list {
@@ -272,11 +273,8 @@ label {
 .navbar-toggler {
 	border: 1px solid #fff;
 }
-.display-small-screen{
-	display: inline;
-}
 
-/* 
+
 @media (min-width: 992px) {
 	.dropdown-menu {
 		right: 0;
@@ -319,10 +317,12 @@ label {
 		opacity: 1;
 		z-index: 1;
 	}
-} */
+}
 
+.display-small-screen{
+	display: inline;
+}
 
-/*iPads y tablets*/
 @media  (min-width: 320px) and (max-width: 768px) {
 	.display-small-screen{
 		display: none;
@@ -330,8 +330,7 @@ label {
 	.section-box {
 		padding-top: 8rem;
 		padding-left: 1rem;
-	}
-	.turnos-bg {
+	}	.turnos-bg {
 		background-image: url(imagenes/fondomediaquery.png);
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -400,7 +399,7 @@ label {
 		color: #fff;
 	}
 }
-/*Small screens, laptops*/
+
 @media  (min-width: 768px) and (max-width: 1024px){
 	.display-small-screen{
 		display: inline;
@@ -412,10 +411,6 @@ label {
 		background-position: center center;
 		background-attachment: fixed;
 		height: 100%;
-	}
-
-	.dropdown {
-		display: none;
 	}
 
 	.usuario-bg {
@@ -487,7 +482,13 @@ label {
 		color: #fff;
 	}
 }
-/*Desktop, large screen*/
+
+@media (max-width: 997px) {
+	.dropdown {
+		display: none;
+	}
+}
+
 @media (min-width: 1025px) and (max-width: 1200px) {
 	.turnos-bg {
 		background-image: url(imagenes/fondomediaquery.png);
@@ -566,9 +567,9 @@ label {
 	}
 
 	.section-box {
-    padding-top: 12rem;
-    padding-left: 7rem;
-}
+		padding-top: 12rem;
+		padding-left: 7rem;
+	}
 
 
 }
@@ -580,6 +581,5 @@ label {
 		background-size: cover;
 		background-position: center center;
 		background-attachment: fixed;
-		height: 100%;
 	}
 }
