@@ -88,20 +88,21 @@ html, body {
 
 
 .admin-bg {
-    background-image: url(imagenes/fondo.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
-    height: 100%;
+	background-image: url(imagenes/fondo.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+	height: 100%;
 }
 
 .btn-usuarios {
-	padding-top: 1rem;	
+	padding: 0.4rem;
+    padding-top: 0.8rem;	
 }
 
 .welcome {
-	padding-top: 2rem;
+	padding-top: 0.5rem;
 	font-weight: 700;
 }
 
@@ -159,8 +160,8 @@ html, body {
 
 .btn-cancel {
 	padding-top: .8rem;
-    font-weight: 700;
-    margin-left: 3rem;
+	font-weight: 700;
+	margin-left: 3rem;
 }
 
 .turno-list {
@@ -401,10 +402,6 @@ label {
 		height: 100%;
 	}
 
-	.dropdown {
-		display: none;
-	}
-
 	.usuario-bg {
 		background-image: url(imagenes/fondomediaquery.png);
 		background-repeat: no-repeat;
@@ -472,6 +469,12 @@ label {
 
 	.table td, .table th {
 		color: #fff;
+	}
+}
+
+@media (max-width: 997px) {
+	.dropdown {
+		display: none;
 	}
 }
 
@@ -553,9 +556,9 @@ label {
 	}
 
 	.section-box {
-    padding-top: 12rem;
-    padding-left: 7rem;
-}
+		padding-top: 12rem;
+		padding-left: 7rem;
+	}
 
 
 }
@@ -567,6 +570,5 @@ label {
 		background-size: cover;
 		background-position: center center;
 		background-attachment: fixed;
-		height: 100%;
 	}
 }

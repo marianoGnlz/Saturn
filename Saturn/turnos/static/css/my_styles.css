@@ -71,6 +71,7 @@
 
 .btn-buscar {
     padding-top: 1.7rem;
+    margin-left: .5rem;
 }
 
 .turn {
@@ -86,4 +87,18 @@
 
 .th-turn, .td-turn, .label-admin {
     color: #fff;
+}
+
+.page-link {
+    background-color: #15202b;
+    color: #fff;
+}
+
+.page-link:hover {
+    background-color: #293D51;
+    color: #fff;
+}
+
+.td-turnok {
+    font-size: 0.8rem;
 }

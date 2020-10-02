@@ -3,6 +3,7 @@ from turnos.forms import TurnoForm
 from turnos.models import Turno, EspecialidadMedico, Medico, ConfiguracionHoraria
 from users.models import Registro
 from datetime import datetime
+from django.core.paginator import Paginator
 
 
 import datetime
@@ -74,8 +75,19 @@ def combo_horario(request):
 def turn_ok(request):    
     registro = Registro.objects.get(email=request.user)
     turno = Turno.objects.filter(usuario_id=registro.idUsuario)
+    paginator = Paginator(turno, 3)
+    try:
+        page = int(request.GET.get('page', '1'))
+    except:
+        page = 1
+
+    try:
+        turnos = paginator.page(page)
+    except(EmptyPage, InvalidPage):
+        turnos = paginator.page(paginator.num_pages)
+
     contexto = {
-        'turno':turno,
+        'turno': turnos,
         }
     return render(request, "turn_ok.html",contexto) 
 
@@ -105,3 +117,4 @@ def delete_turn(request,TurnoId):
     idturno= Turno.objects.get(TurnoId=TurnoId)
     idturno.delete()
     return render(request,"delete_turn.html") 
+

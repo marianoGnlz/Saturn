@@ -9,23 +9,23 @@
             <h2 class="welcome text-center">
                 Mis Turnos Solicitados
             </h2> 
-            <table class="table">
+            <table class="table mb-0">
                 <tr>
-                    <th scope="row">DIA </th>
-                    <th scope="row">NOMBRE </th>
-                    <th scope="row">ESPECIALIDAD</th>
-                    <th scope="row">MEDICO</th>    
-                    <th scope="row"></th>       
+                    <th class="td-turnok" scope="row">DIA </th>
+                    <th class="td-turnok" scope="row">NOMBRE </th>
+                    <th class="td-turnok" scope="row">ESPECIALIDAD</th>
+                    <th class="td-turnok" scope="row">MEDICO</th>    
+                    <th class="td-turnok" scope="row"></th>       
                 </tr>
-                {% for turno in turno %}
+                {% for turno in turno.object_list %}
                 <tr>
-                    <td>{{turno.fecha_turno}}</td>
-                    <td>{{turno.nombre}}</td>
-                    <td>{{turno.especialidad.descripcion}}</td>
-                    <td>{{turno.medico.nombre}}</td>
-                    <td>
+                    <td class="td-turnok">{{turno.fecha_turno}}</td>
+                    <td class="td-turnok">{{turno.nombre}}</td>
+                    <td class="td-turnok">{{turno.especialidad.descripcion}}</td>
+                    <td class="td-turnok">{{turno.medico.nombre}}</td>
+                    <td class="td-turnok">
 
-                        <a href="/delete_turn/{{turno.TurnoId}}" class="btn btn-primary list btn-usuarios">Cancelar</a>      
+                        <a href="/delete_turn/{{turno.TurnoId}}" class="btn btn-sm btn-primary list btn-usuarios">Cancelar</a>      
                     </td>
                 </tr>
 
@@ -37,11 +37,41 @@
                 <p class="no-reg">Usted no posee turnos registrados</p>
                 {% endif %} 
             </div>
-            <a href="/dashboard" class="btn btn-primary btn-usuarios">Volver</a>
-            <a href="/new_turn" class="btn btn-primary btn-usuarios">Solicitar Turno</a> 
-
+            <nav aria-label="Page navigation example" class="d-flex align-items-center justify-content-center">
+                <ul class="pagination">
+                    {% if turno.has_previous %}
+                    <li class="page-item">
+                        <a class="page-link btn-sm pb-0" href="?page={{ turno.previous_page_number }}" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                    </li>
+                    {% endif %} 
+                    {% for pg in turno.paginator.page_range %}
+                        {% if turno.number == pg %}
+                            <li class="page_item active"><a class="page-link pb-0 btn-sm" href="?page={{ pg }}">{{ pg }}</a></li>
+                        {% else %}
+                            <li class="page-item"><a class="page-link btn-sm pb-0" href="?page={{ pg }}">{{ pg }}</a></li>
+                        {% endif %}
+                    {% endfor %}
+                    {% if turno.has_next %}
+                        <li class="page-item">
+                            <a class="page-link btn-sm pb-0" href="?page={{  turno.next_page_number }}">
+                                <span aria-hidden="true">&raquo;</span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </li>
+                    {% endif %}
+                </ul>
+            </nav>
+            <div>
+                <a href="/dashboard" class="btn btn-primary btn-usuarios btn-sm">Volver</a>
+                <a href="/new_turn" class="btn btn-primary btn-usuarios btn-sm">Solicitar Turno</a>
+            </div>
+             
         </div>
     </div>    
 </div>
+
 
 {% endblock %}
