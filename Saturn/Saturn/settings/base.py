@@ -77,6 +77,12 @@ WSGI_APPLICATION = 'Saturn.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR,'db.sqlite3'),
+#     }
+# }
 
 DATABASES = {
    'default': {
@@ -141,6 +147,7 @@ STATIC_ROOT = '/home/DeployPythonTest/static'
 STATICFILES_DIRS = (
     os.path.join(os.path.dirname(BASE_DIR) + "/users", 'static'),
     os.path.join(os.path.dirname(BASE_DIR) + "/turnos", 'static'),
+    os.path.join(os.path.dirname(BASE_DIR) + "/vistas", 'static'),
 )
 
 SILENCED_SYSTEM_CHECKS = [
