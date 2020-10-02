@@ -22,8 +22,8 @@ from turnos import views as vistaTurnos
 urlpatterns = [
     # path('', views.welcome),
     path('register/', vista.register, name='register'),
-    path('', views.login, name='login'),
-    path('login/', vista.login, name='login'),
+    path('', vista.login, name='login'),
+    # path('login/', vista.login, name='login'),
     path('logout/', vista.logout, name='logout'),
     path('dashboard/', views.dashboard, name='dashboard'),
     path('new_turn/', vistaTurnos.new_turn, name='new_turn'),

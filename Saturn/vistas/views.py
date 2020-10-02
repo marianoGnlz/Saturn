@@ -14,6 +14,3 @@ def dashboard(request):
     }
     return render(request, "dashboard.html", context)
 
-def login(request):
-	return render(request, 'login.html')
- 

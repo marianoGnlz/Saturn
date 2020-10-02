@@ -65,7 +65,6 @@ def combo_horario(request):
                 j = j + hm.duracion
             i = i + 1    
 
-    print(horarios_array)
 
     contexto = {
         'horarios_array':horarios_array
