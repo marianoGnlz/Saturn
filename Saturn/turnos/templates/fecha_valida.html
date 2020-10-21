@@ -1,0 +1,5 @@
+{% if fecha_turno >= now %}
+    <p class="alert alert-warning">La fecha solicitada esta disponible</p>
+{% else %}
+    <p class="alert alert-danger">La fecha solicitada no esta disponible</p>
+{% endif %}

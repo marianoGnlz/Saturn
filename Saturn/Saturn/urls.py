@@ -32,6 +32,8 @@ urlpatterns = [
     path('combo_horario/', vistaTurnos.combo_horario, name='combo_horario'),
     path('listado_del_dia/', vistaTurnos.listado_del_dia, name='listado_del_dia'),
     path('delete_turn/<int:TurnoId>/', vistaTurnos.delete_turn, name='delete_turn'),
+    path('adicional/', vistaTurnos.adicional, name='adicional'),
+    path('fecha_valida/', vistaTurnos.fecha_valida, name='fecha_valida'),
 
     path('admin/', admin.site.urls),
 ]

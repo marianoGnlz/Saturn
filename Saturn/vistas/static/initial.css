@@ -1,5 +1,5 @@
 * {
-	font-family: 'Baloo Tammudu 2', cursive; 
+	font-family: 'Baloo Tammudu 2', cursive;
 }
 
 .container {
@@ -37,9 +37,9 @@
 	padding: 15px;
 }
 
-.carousel-control .glyphicon-chevron-left, 
-.carousel-control .glyphicon-chevron-right, 
-.carousel-control .icon-prev, 
+.carousel-control .glyphicon-chevron-left,
+.carousel-control .glyphicon-chevron-right,
+.carousel-control .icon-prev,
 .carousel-control .icon-next {
 	position: absolute;
 	top: 45%;
@@ -113,11 +113,13 @@
 .text-center-footer{
     text-align: center;
     padding: 5px 5px 5px 5px;
+    padding-right: 8rem;
 }
 .btn-initial{
     padding: 2rem 2rem 1rem 2rem;
     font-size: 18px;
-    margin-left: 10px
+    margin-left: 10px;
+    background-color: #15202b;
 }
 
 .glyphicon-chevron-right:before {

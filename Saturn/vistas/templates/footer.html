@@ -1,41 +1,30 @@
 {% load static %}
-<link rel="stylesheet" href="{% static 'stylesVistas.css' %}" />
 
-<footer class="seccion">
-	<div class="container">
-		<div class="row row-footer">
-			<div class="columna columna-25">
-				<img src="{% static '/imagenes/icono.png' %}" alt="" class="img-fluid logo-saturn">
-				<p class="footer-titulo">SATURN</p>
-			</div>
-			<div class="columna columna-25 columna-mobile-100 temas-relacionados">
-				<h3>
-					Temas relacionados
-				</h3>
-				<a class="temas" href="#">Acerca de Nosotros</a>
-				<a class="temas" href="#">Contáctenos</a>
-				
-			</div>
-			<div class="columna columna-25 columna-mobile-100">
-				<h3>
-					Datos de Contacto
-				</h3>
-				<p>saturn@gmail.com</p>
-				<p>Resistencia - Chaco</p>
-			</div>
-			<div class="columna columna-25 columna-mobile-100">
-				<h3>
-					Redes Sociales
-				</h3>
-				<div class="redes">					
-					<a href="#"></a><i class="fab fa-facebook-square"></i></a>				
-					<a href="#"><i class="fab fa-twitter"></i></a>				
-					<a href="#"><i class="fab fa-instagram"></i></a>					
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="barra-footer">
-		&copy; Derechos Reservados - INFORMATORIO 2020
-	</div>
+<footer class="d-flex justify-content-center align-items-center footer">
+  <div
+    class="d-flex justify-content-center align-items-center container-footer w-100 px-5"
+  >
+    <div class="mx-auto footer-direccion">
+      <i class="fas fa-map-marker-alt mr-2"></i>
+      <p class="display-small-screen">Av.9 de Julio - 4200</p>
+    </div>
+    <div class="mx-auto">
+      <a
+        href="https://support.riotgames.com/hc/es"
+        class="footer-atencion mx-2"
+        target="_blank"
+        ><i class="fas fa-phone"></i>
+        <p class="display-small-screen">Atención al cliente</p></a
+      >
+    </div>
+    <div class="mx-auto">
+      <a href="http://twitter.com/" target="_BLANK"
+        ><i class="fab fa-twitter mx-4 pt-2"></i></a
+      ><a href="http://facebook.com/" target="_BLANK"
+        ><i class="fab fa-facebook-f pt-2"></i></a
+      ><a href="https://github.com/LeonardoBrabo/Saturn" target="_BLANK"
+        ><i class="fab fa-github mx-4 pt-2"></i
+      ></a>
+    </div>
+  </div>
 </footer>

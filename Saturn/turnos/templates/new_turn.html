@@ -1,86 +1,88 @@
 {% extends 'main.html' %}
 
 {% block content %}
-
 <div class="row turnos-bg no-gutters">
-    <div class="col-12 col-xl-4">
-        <div class="card-body-new">
-            <h2 class="card-title text-center mt-3">Nuevo Turno</h2>
+	<div class="col-lg-4 col-md-7 col-sm-12 col-xs-12">
+		<div class="card-body-new">
+	        <h2 class="card-title text-center mt-3">Nuevo Turno</h2>
             <form method="POST" class="turnos-content mx-5 mx-xl-0 pl-xl-4">
                 {% csrf_token %}
                 <div class="form-group">
-                    <label>Fecha Solicitada</label>
+                    <label  class="label_new">Fecha Solicitada</label>
                     {{ form.fecha_turno }}
+                    <div id="fecha_valida"></div>
                 </div>
                 <div class="row">
                     <div class="col-xs-12 col-md-6">
                         <div class="form-group">
-                            <label  class="">Especialidad</label>
+                            <label  class="label_new">Especialidad</label>
                             {{ form.especialidad }}
                         </div>
                     </div>
                     <div class="col-xs-12 col-md-6">
                         <div class="form-group">
-                            <label class="">Médico</label>
+                            <label class="label_new">Médico</label>
                             {{ form.medico }}
-                        </div>    
-                    </div>    
-                </div>            
+                        </div>
+                    </div>
+                </div>
                 <div class="form-group">
-                    <label  class="">Hora del Turno</label>
+                    <label  class="label_new">Hora del Turno</label>
                     <select class="form-control turn" name="hora_turno" required id="id_hora_turno">
                         <option>------------</option>
                     </select>
-                </div>             
-                <div class="form-group">
-                    <label  class="">Obra Social</label>
-                    {{ form.obrasocial }}
                 </div>
                 <div class="form-group">
-                    <label  class="">Nombre y Apellido</label>
+                    <label  class="label_new">Obra Social</label>
+                    {{ form.obrasocial }}
+                    <div id="adicional"></div>
+                </div>
+                <div class="form-group">
+                    <label  class="label_new">Nombre y Apellido</label>
                     {{ form.nombre }}
                 </div>
                 <div class="row">
                     <div class="col-xs-12 col-md-8">
                         <div class="form-group">
-                            <label  class="">DNI</label>
+                            <label  class="label_new">DNI</label>
                             {{ form.dni }}
                         </div>
                     </div>
                     <div class="col-xs-12 col-md-4">
                         <div class="form-group">
-                            <label  class="">Edad</label>
+                            <label  class="label_new">Edad</label>
                             {{ form.edad }}
                         </div>
                     </div>
-                </div>    
-                
+                </div>
+
                 <div class="row">
                     <div class="col-xs-12 col-md-6">
                         <div class="form-group">
-                            <label  class="">Teléfono</label>
+                            <label  class="label_new">Teléfono</label>
                             {{ form.telefono }}
                         </div>
                     </div>
                     <div class="col-xs-12 col-md-6">
                         <div class="form-group">
-                            <label  class="">Correo Electrónico</label>
+                            <label  class="label_new">Correo Electrónico</label>
                             {{ form.mail }}
                         </div>
                     </div>
-                </div>   
-                <div class="col-xs-12 col-md-4 column">
-                    <div class="form-group">
-                        <label  class="">Sexo</label>
-                        {{ form.sexo }}
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-md-12">
+                        <div class="form-group">
+                            <label  class="label_new">Sexo</label>
+                            {{ form.sexo }}
+                        </div>
                     </div>
-                </div>      
-                <button type="submit" class="btn btn-primary btn-turno">Registrar</button>
+                </div>
+                <button type="submit" class="btn btn-primary btn-turno">Solicitar</button>
                 <a href="/dashboard/" class="btn btn-primary btn-turno">Cancelar</a>
-            </form>        
+            </form>
         </div>
     </div>
 </div>
 
 {% endblock %}
-

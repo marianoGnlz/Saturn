@@ -1,10 +1,10 @@
 * {
-	font-family: 'Baloo Tammudu 2', cursive; 
+	font-family: 'Baloo Tammudu 2', cursive;
 }
 
 html, body {
 	height: 100%;
-	margin: 0; 
+	margin: 0;
 }
 
 .turnos-bg {
@@ -98,7 +98,7 @@ html, body {
 
 .btn-usuarios {
 	padding: 0.4rem;
-    padding-top: 0.8rem;	
+    padding-top: 0.8rem;
 }
 
 .welcome {
@@ -114,6 +114,7 @@ html, body {
 
 .section-box {
 	padding-left: 7rem;
+	padding-top: 10rem;
 }
 
 .navbar {
@@ -275,7 +276,7 @@ label {
 	border: 1px solid #fff;
 }
 
-.footer {	
+.footer {
 	position: fixed;
 	bottom: 0;
 	width: 100%;
@@ -502,7 +503,7 @@ footer li {
     footer .redes {
         justify-content: center;
 	}
-	
+
 	.logo-saturn{
 		display: none;
 	}
