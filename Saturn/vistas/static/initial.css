@@ -132,6 +132,11 @@ body {
     font-weight: 700;
 }
 
+.btn-initial:hover {
+    background-color: #293D51;
+    border-color: #293D51;
+}
+
 .glyphicon-chevron-right:before {
     color: black;
 }

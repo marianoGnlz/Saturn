@@ -4,6 +4,7 @@ from turnos.models import Turno, EspecialidadMedico, Medico, ConfiguracionHorari
 from users.models import Registro
 from datetime import datetime
 from django.core.paginator import Paginator
+from django.contrib.auth.decorators import login_required
 
 
 import datetime
@@ -90,6 +91,7 @@ def turn_ok(request):
         }
     return render(request, "turn_ok.html",contexto)
 
+@login_required(login_url='login')
 def listado_del_dia(request):
     medicos = Medico.objects.all()
     now = datetime.datetime.now().date()
