@@ -64,7 +64,7 @@ html, body {
 .card-title {
 	font-weight: 800;
 	font-size: 2.5rem;
-	padding-top: 7rem;
+	padding-top: 1rem;
 }
 
 
@@ -74,7 +74,7 @@ html, body {
 	background-size: cover;
 	background-position: center center;
 	background-attachment: fixed;
-	height: 100%;
+	height: 90%;
 }
 
 .usuario-bg {
@@ -83,7 +83,7 @@ html, body {
 	background-size: cover;
 	background-position: center center;
 	background-attachment: fixed;
-	height: 100%;
+	height: 90%;
 }
 
 
@@ -420,6 +420,12 @@ footer li {
 	display: inline;
 }
 
+.alert {
+	padding-left: 2rem;
+    padding-top: .30rem;
+    padding-bottom: 0rem;
+}
+
 @media  (min-width: 320px) and (max-width: 768px) {
 	.display-small-screen{
 		display: none;
@@ -683,9 +689,17 @@ footer li {
 		background-attachment: fixed;
 	}
 
+	.usuario-bg {
+	height: 80%;
+	}
+
 	.section-box {
-		padding-top: 12rem;
+		padding-top: 6rem;
 		padding-left: 7rem;
+	}
+
+	.turno-list {
+		padding-top: 2rem;
 	}
 
 

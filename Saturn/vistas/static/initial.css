@@ -1,5 +1,14 @@
 * {
 	font-family: 'Baloo Tammudu 2', cursive;
+    color: #fff
+}
+
+body {
+    background-image: url(imagenes/fondo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
 }
 
 .container {
@@ -120,6 +129,7 @@
     font-size: 18px;
     margin-left: 10px;
     background-color: #15202b;
+    font-weight: 700;
 }
 
 .glyphicon-chevron-right:before {

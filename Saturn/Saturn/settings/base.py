@@ -26,7 +26,7 @@ SECRET_KEY = 'c&o7#gf*#7o9=c%ng-8zwn2xofage^*=c=*_34^)&pvqqu=@be'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['DeployPythonTest.pythonanywhere.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -87,10 +87,10 @@ WSGI_APPLICATION = 'Saturn.wsgi.application'
 DATABASES = {
    'default': {
      'ENGINE': 'django.db.backends.mysql',
-      'NAME': 'DeployPythonTest$databasedjango',
-      'USER': 'DeployPythonTest',
-      'PASSWORD':'saturn123456',
-      'HOST':'DeployPythonTest.mysql.pythonanywhere-services.com',
+      'NAME': 'saturn',
+      'USER': 'root',
+      'PASSWORD':'',
+      'HOST':'127.0.0.1',
       'PORT':'3306',
       'OPTIONS': {
            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
