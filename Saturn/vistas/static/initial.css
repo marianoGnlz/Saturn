@@ -1,5 +1,14 @@
 * {
-	font-family: 'Baloo Tammudu 2', cursive; 
+	font-family: 'Baloo Tammudu 2', cursive;
+    color: #fff
+}
+
+body {
+    background-image: url(imagenes/fondo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
 }
 
 .container {
@@ -37,9 +46,9 @@
 	padding: 15px;
 }
 
-.carousel-control .glyphicon-chevron-left, 
-.carousel-control .glyphicon-chevron-right, 
-.carousel-control .icon-prev, 
+.carousel-control .glyphicon-chevron-left,
+.carousel-control .glyphicon-chevron-right,
+.carousel-control .icon-prev,
 .carousel-control .icon-next {
 	position: absolute;
 	top: 45%;
@@ -113,11 +122,19 @@
 .text-center-footer{
     text-align: center;
     padding: 5px 5px 5px 5px;
+    padding-right: 8rem;
 }
 .btn-initial{
     padding: 2rem 2rem 1rem 2rem;
     font-size: 18px;
-    margin-left: 10px
+    margin-left: 10px;
+    background-color: #15202b;
+    font-weight: 700;
+}
+
+.btn-initial:hover {
+    background-color: #293D51;
+    border-color: #293D51;
 }
 
 .glyphicon-chevron-right:before {

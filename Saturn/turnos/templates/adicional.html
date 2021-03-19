@@ -1,0 +1,7 @@
+{% if obrasocial_adicional.descripcion == 'Insssep' %}
+    <p class="alert alert-warning">>El adiconal a pagar es de $ {{obrasocial_adicional.Adicional}}</p>
+{% elif obrasocial_adicional.descripcion == 'Medifé' %}
+    <p class="alert alert-warning">>El adiconal a pagar es de $ {{obrasocial_adicional.Adicional}}</p>
+{% else %}
+    <p class="alert alert-info">Esta Obra Social no tiene adicional</p>
+{% endif %}
